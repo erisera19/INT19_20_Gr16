@@ -1,0 +1,30 @@
+h1,h2,div{
+	color:white;
+    background-color:#404040;
+
+    
+}
+ul{
+    background-color:#585858;
+    padding: 10px;
+    border: 2px solid black;
+}
+ li{
+ display: inline;
+ font-style: none;
+    font-family: "ariel";
+    margin-top: 30px;
+  margin-bottom: 30px;
+  margin-right: 20px;
+  margin-left: 10px;
+
+    padding:30px;
+    
+}
+
+
+li:hover{
+    background-color:black;
+    color:white;
+    
+}
