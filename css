@@ -1,9 +1,14 @@
-h1,h2,div{
+div#d1{
 	color:white;
     background-color:#404040;
 
-    
+    padding:22px;
 }
+
+h1{
+    font-size: 2em;
+}
+
 ul{
     background-color:#585858;
     padding: 10px;
@@ -13,12 +18,12 @@ ul{
  display: inline;
  font-style: none;
     font-family: "ariel";
-    margin-top: 30px;
-  margin-bottom: 30px;
-  margin-right: 20px;
-  margin-left: 10px;
+    margin-top: 10px;
+  margin-bottom: 10px;
+  margin-right: 5px;
+  margin-left: 5px;
 
-    padding:30px;
+    padding:20px;
     
 }
 
@@ -26,5 +31,7 @@ ul{
 li:hover{
     background-color:black;
     color:white;
-    
+}
+a{
+    color:white;
 }
