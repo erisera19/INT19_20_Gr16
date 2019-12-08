@@ -41,46 +41,7 @@ img
              width: 200px;
              
         }
-     .circlephoto {
-  width: 400px;
-  display: block; /*or inline-block*/
-  padding: 10px; /*just for a little visual spacing*/
-}
-.circlephoto img {
-  width: 128px;
-  height: 128px;
-  position: relative;
-  display: inline-block;
-  float: left;
-  margin-right: 25px;
-  border-radius:50%;
-}
-.circlephoto p {
-  display: inline-block;
-  position: relative;
-  width: 250px;
-  float: left;
-}
-.squarephoto {
-   width: 400px;
-  display: block; /*or inline-block*/
-  padding: 10px; 
-}
-.squarephoto img {
-  width: 110px;
-  height: 130px;
-  position: relative;
-  display: inline-block;
-  float: left;
-  margin-right: 25px;
-  }
-  .squarephoto p {
-  display: inline-block;
-  position: relative;
-  width: 250px;
-  float: left;
-
-}
+  
 #header2a{
 text-align:center;
 display: grid;
@@ -94,4 +55,97 @@ justify-content:center;
 content: " ";
 display: block;
 border-bottom: 7px solid #E8E8E8;
+}
+body
+	{
+		background-color:black
+	}
+	
+	.class_search1 
+	{ 
+		float:right; 
+		background-color:		#484848; 
+		color:#FFCCFF; 
+		text-align:center; 
+		height:30px; 
+		width:170px; 
+		border-radius:6px; 
+		font-size:12px;
+	} 
+			
+	.class_search2 
+	{ 
+		float:right; 
+		background-color:green; 
+		color:#FFCCFF; 
+		text-align:center; 
+		height:30px; 
+		width:100px; 
+		border-radius:6px; 
+		font-size:15px;
+	}  
+	.class_search3
+	{
+	background-color:green;
+		height:30px; 
+		width:100px; 
+		border-radius:6px; 
+		font-size:15px;
+		}
+		
+	
+	* 
+	{
+		box-sizing: border-box;
+	}
+	
+	.column 
+	{
+		float: left;
+		width: 33.33%;
+		padding: 5px;
+	}
+	
+	.row::after 
+	{
+		content: "";
+		clear: both;
+		display: table;
+	}
+	hr.new1 
+	{
+		border-top: 1px solid grey;
+	}  
+	hr.new2
+	{
+	border-top: 1px solid green;
+	}
+	.img-round {
+    border-radius: 50%;
+}
+.square 
+	{
+	background-color: #555;
+}
+#w{
+background-color:white;
+}
+#o{
+background-color:white;
+}
+.foto {
+  position: relative;
+  font-family: Arial;
+}
+
+.text-block {
+  position: absolute;
+  bottom: 20px;
+  left: 20px;
+  background-color: green;
+  color: white;
+  padding-left: 20px;
+  padding-right: 20px;
+  height:100px; 
+  width:500px;
 }
