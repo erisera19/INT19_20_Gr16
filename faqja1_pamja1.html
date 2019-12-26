@@ -1,0 +1,238 @@
+<!DOCTYPE html>
+<html>
+<head>
+<style>
+	* {box-sizing: border-box}
+body {font-family: Verdana, sans-serif; margin:0}
+.mySlides {display: none}
+img {vertical-align: middle;}
+
+/* Slideshow container */
+.slideshow-container {
+  max-width: 1000px;
+  position: relative;
+  margin: auto;
+}
+
+/* Next & previous buttons */
+.prev, .next {
+  cursor: pointer;
+  position: absolute;
+  top: 50%;
+  width: auto;
+  padding: 16px;
+  margin-top: -22px;
+  color: white;
+  font-weight: bold;
+  font-size: 18px;
+  transition: 0.6s ease;
+  border-radius: 0 3px 3px 0;
+  user-select: none;
+}
+
+/* Position the "next button" to the right */
+.next {
+  right: 0;
+  border-radius: 3px 0 0 3px;
+}
+
+/* On hover, add a black background color with a little bit see-through */
+.prev:hover, .next:hover {
+  background-color: rgba(0,0,0,0.8);
+}
+
+/* Caption text */
+.text {
+  color: #f2f2f2;
+  font-size: 15px;
+  padding: 8px 12px;
+  position: absolute;
+  bottom: 8px;
+  width: 100%;
+  text-align: center;
+}
+
+/* Number text (1/3 etc) */
+.numbertext {
+  color: #f2f2f2;
+  font-size: 12px;
+  padding: 8px 12px;
+  position: absolute;
+  top: 0;
+}
+
+/* The dots/bullets/indicators */
+.dot {
+  cursor: pointer;
+  height: 15px;
+  width: 15px;
+  margin: 0 2px;
+  background-color: #bbb;
+  border-radius: 50%;
+  display: inline-block;
+  transition: background-color 0.6s ease;
+}
+
+.active, .dot:hover {
+  background-color: #717171;
+}
+
+/* Fading animation */
+.fade {
+  -webkit-animation-name: fade;
+  -webkit-animation-duration: 1.5s;
+  animation-name: fade;
+  animation-duration: 1.5s;
+}
+
+@-webkit-keyframes fade {
+  from {opacity: .4} 
+  to {opacity: 1}
+}
+
+@keyframes fade {
+  from {opacity: .4} 
+  to {opacity: 1}
+}
+@media only screen and (max-width: 300px) {
+  .prev, .next,.text {font-size: 11px}
+}
+</style>
+<div>
+<table>
+<tr>
+  <td>
+    <h1>Untainted</h1>
+    <p>Free PSD Website Template</p>
+  </td>
+  <td>
+    
+    <form id="search">
+    <input class="class_search2" type="submit" name="Search" value="Search">
+    <input class="class_search1" type="text" name="Search" placeholder="Search Our Website...">
+    </form>
+  </td>
+</tr>
+</table>
+<br><br><br>
+</div> 
+
+
+<table border="1" cellspacing="1">
+  <tr>
+    <th><a target='_top'>HOMEPAGE </a></th>
+    <th><a target='_top'>STYLEDEMO  </a></th>
+    <th><a target='_top'>FULLWIDTH  </a></th>
+    <th><a target='_top'>DROPDOWN   </a></th>
+    <th><a target="_top">GALLERY </a></th>
+    <th><a target="_top">PORTFOLIO </a></th>
+    <th><a target="_top">A LINK TEXT </a></th>
+  </tr>
+</table>
+<br>
+
+<div class="slideshow-container">
+
+<div class="mySlides fade">
+  <div class="numbertext">1 / 3</div>
+  <img src="C:\Users\FESTIMGASHI\Desktop/karaburunn.jpg" style="width:100%">
+  <div class="text">Karaburun, Shqip&#235ri</div>
+</div>
+
+<div class="mySlides fade">
+  <div class="numbertext">2 / 3</div>
+  <img src="C:\Users\FESTIMGASHI\Desktop/Jale-riviera-albanese.jpg" style="width:100%">
+  <div class="text">Jal&#235, Shqip&#235ri</div>
+</div>
+
+<div class="mySlides fade">
+  <div class="numbertext">3 / 3</div>
+  <img src="C:\Users\FESTIMGASHI\Desktop/maxresdefault.jpg" style="width:100%">
+  <div class="text">Porto Palermo, Shqip&#235ri</div>
+</div>
+
+<a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+<a class="next" onclick="plusSlides(1)">&#10095;</a>
+
+</div>
+<br>
+
+<div style="text-align:center">
+  <span class="dot" onclick="currentSlide(1)"></span> 
+  <span class="dot" onclick="currentSlide(2)"></span> 
+  <span class="dot" onclick="currentSlide(3)"></span> 
+</div>
+
+<script>
+var slideIndex = 1;
+showSlides(slideIndex);
+
+function plusSlides(n) {
+  showSlides(slideIndex += n);
+}
+
+function currentSlide(n) {
+  showSlides(slideIndex = n);
+}
+
+function showSlides(n) {
+  var i;
+  var slides = document.getElementsByClassName("mySlides");
+  var dots = document.getElementsByClassName("dot");
+  if (n > slides.length) {slideIndex = 1}    
+  if (n < 1) {slideIndex = slides.length}
+  for (i = 0; i < slides.length; i++) {
+      slides[i].style.display = "none";  
+  }
+  for (i = 0; i < dots.length; i++) {
+      dots[i].className = dots[i].className.replace(" active", "");
+  }
+  slides[slideIndex-1].style.display = "block";  
+  dots[slideIndex-1].className += " active";
+}
+</script>
+
+</body>
+</html> 
+
+
+<div class="korniza">
+
+<p>
+Q&#235 nga veriu e deri n&#235 jug, vendi yn&#235 &#235sht&#235 i pasur me gjire fantastike, ku mund t&#235 shijosh natyr&#235n e bukur e cila &#235sht&#235 e nd&#235rthurur mes detit dhe malit.
+
+Bregu i Jonit ofron nj&#235 mjedis unik n&#235 zem&#235r t&#235 Europ&#235s.
+
+N&#235 Shqip&#235rin&#235 e Jugut do t&#235 gjeni plazhet qiellore q&#235 ju nuk prisni.
+
+Malet me pamje nga deti, natyra e paprekur dhe uji i kristalt&#235, jo rast&#235sisht n&#235vitet e fundit, p&#235r shkak t&#235 plazheve t&#235 saj, Shqip&#235ria &#235sht&#235 b&#235r&#235 nj&#235 nga destinacionet turistike m&#235 popullore.
+
+N&#235 baz&#235 t&#235 shkrimeve q&#235 jan&#235 b&#235r&#235 n&#235 mediat e huaja, frekuentimit, natyr&#235s, fotografive q&#235 jan&#235 shp&#235rndar&#235, ne kemi zgjedhur 3 plazhet m&#235 t&#235 bukura t&#235 detit Adriatik dhe Jon. List&#235s mund t’i shtohen edhe shum&#235 t&#235 tjer&#235, por k&#235to jan&#235 disa nga p&#235rzgjedhjet tona.
+
+Po e fillojm&#235 nga jugu…</p>
+<br><br>
+<!--Perdorimi i abbr -->
+<p style="font-size:18pt;"> 1.Karaburun </p>
+<p>Pamja e Karaburunit &#235sht&#235 spektakolare, sepse ofron kaq shum&#235 qoshe t&#235 fshehura. Pran&#235 bregut q&#235 rrethon Vlor&#235n, qyteti i tret&#235 i vendit, gjejm&#235 Parkun Detar Komb&#235tar. Mos e humbisni gjirin e Gram&#235s, t&#235 fshehur midis maleve shk&#235mbore. N&#235 Karaburun, uji &#235sht&#235 kristal dhe ka shum&#235 limane t&#235 veçuar me guralec&#235 t&#235 bardh&#235.
+<abbr title="Sindromi Primenstrual">PMS</abbr> . </p><br>
+
+<p style="font-size:18pt;"> 2.Jale </p>
+<p>Plazhi i Jalës është një nga më të bukurit në të gjithë bregdetin jon. Bukuria e gjirit të bën për vetë që lart në kodër, një vend i cili fokusohet në aparatin e gjithsecilit prej nesh, si një pamje mahnitëse për të mos u harruar. Sapo del nga fshati Vuno për në Himarë, në një rrugëz që kthen në të djathtë për nga deti, nëpërmjet gurëve që zbresin tatëpjetën, fshihet kjo bukuri natyrore.
+Pasi zbret në plazhin e mrekullueshëm panorama e parë të bën që të ndalesh fillimisht buzë detit të kristaltë për të bërë një “kredhje” në ujë para se të shkosh në hotelin, shtëpinë apo çadrën e zgjedhur.
+Vija bregdetare është shumë e përshtatshme edhe për ata që nuk i pëlqejnë plazhet me gurë, pasi gurët e imtë nuk shkaktojnë bezdi pas daljes apo gjatë hyrjes në det. Deti është i pastër,  saqë në një thellësi prej më shumë se  4 metrash dallon shumë lehtë dhe diçka fare të vogël. </p><br>
+
+<p style="font-size:18pt;"> 3.Porto Palermo </p>
+<p>Porto Palermo është një gadishull i vogël në të cilin ndodhet kalaja e ndërtuar nga Ali Pasha Tepelena, politikani dhe guvernatori i shumë territoreve europiane të Perandorisë Osmane, në nder të gruas së tij, gjatë shekullit të 19-të. Ky plazh shqiptar është vendi ideal për ata që e duan natyrën e egër. Sigurisht që meriton një ndalesë për shkak të detit, por edhe të kështjellës që mund të vizitohet. </p><br>
+
+
+<p>Komente:</p>
+<form>
+<textarea rows="6" cols="60" placeholder="Komento"></textarea>
+<br>
+<form  name=myform>
+<input type=button value="Posto" 
+onClick="alert('Komenti juaj &#235sht&#235 postuar me sukses!')" 
+style="height:30px; width:100px; border-radius:10px; 
+font-weight:bold;font-size:12pt; font-family:Arial"  >
+</form>
+</div>
