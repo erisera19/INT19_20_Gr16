@@ -1,0 +1,247 @@
+<!DOCTYPE html>
+<html>
+<head>
+<style>
+* {box-sizing: border-box}
+body {font-family: Verdana, sans-serif; margin:0}
+.mySlides {display: none}
+img {vertical-align: middle;}
+
+/* Slideshow container */
+.slideshow-container {
+  max-width: 1000px;
+  position: relative;
+  margin: auto;
+}
+
+/* Next & previous buttons */
+.prev, .next {
+  cursor: pointer;
+  position: absolute;
+  top: 50%;
+  width: auto;
+  padding: 16px;
+  margin-top: -22px;
+  color: white;
+  font-weight: bold;
+  font-size: 18px;
+  transition: 0.6s ease;
+  border-radius: 0 3px 3px 0;
+  user-select: none;
+}
+
+/* Position the "next button" to the right */
+.next {
+  right: 0;
+  border-radius: 3px 0 0 3px;
+}
+
+/* On hover, add a black background color with a little bit see-through */
+.prev:hover, .next:hover {
+  background-color: rgba(0,0,0,0.8);
+}
+
+/* Caption text */
+.text {
+  color: #f2f2f2;
+  font-size: 15px;
+  padding: 8px 12px;
+  position: absolute;
+  bottom: 8px;
+  width: 100%;
+  text-align: center;
+}
+
+/* Number text (1/3 etc) */
+.numbertext {
+  color: #f2f2f2;
+  font-size: 12px;
+  padding: 8px 12px;
+  position: absolute;
+  top: 0;
+}
+
+/* The dots/bullets/indicators */
+.dot {
+  cursor: pointer;
+  height: 15px;
+  width: 15px;
+  margin: 0 2px;
+  background-color: #bbb;
+  border-radius: 50%;
+  display: inline-block;
+  transition: background-color 0.6s ease;
+}
+
+.active, .dot:hover {
+  background-color: #717171;
+}
+
+/* Fading animation */
+.fade {
+  -webkit-animation-name: fade;
+  -webkit-animation-duration: 1.5s;
+  animation-name: fade;
+  animation-duration: 1.5s;
+}
+
+@-webkit-keyframes fade {
+  from {opacity: .4} 
+  to {opacity: 1}
+}
+
+@keyframes fade {
+  from {opacity: .4} 
+  to {opacity: 1}
+}
+@media only screen and (max-width: 300px) {
+  .prev, .next,.text {font-size: 11px}
+}
+</style>
+<div>
+<table>
+<tr>
+  <td>
+    <h1>Untainted</h1>
+    <p>Free PSD Website Template</p>
+  </td>
+  <td>
+    
+    <form id="search">
+    <input class="class_search2" type="submit" name="Search" value="Search">
+    <input class="class_search1" type="text" name="Search" placeholder="Search Our Website...">
+    </form>
+  </td>
+</tr>
+</table>
+<br><br><br>
+</div> 
+
+
+<table border="1" cellspacing="1">
+  <tr>
+    <th><a target='_top'>HOMEPAGE </a></th>
+    <th><a target='_top'>STYLEDEMO  </a></th>
+    <th><a target='_top'>FULLWIDTH  </a></th>
+    <th><a target='_top'>DROPDOWN   </a></th>
+    <th><a target="_top">GALLERY </a></th>
+    <th><a target="_top">PORTFOLIO </a></th>
+    <th><a target="_top">A LINK TEXT </a></th>
+  </tr>
+</table>
+<br>
+
+<div class="slideshow-container">
+
+<div class="mySlides fade">
+  <div class="numbertext">1 / 3</div>
+  <img src="C:\Users\FESTIMGASHI\Desktop/alpett.jpg" style="width:100%">
+  <div class="text"> Alpet Shqiptare </div>
+</div>
+
+<div class="mySlides fade">
+  <div class="numbertext">2 / 3</div>
+  <img src="C:\Users\FESTIMGASHI\Desktop/theth.jpg"  style="width:100%">
+  <div class="text"> Theth </div>
+</div>
+
+<div class="mySlides fade">
+  <div class="numbertext">3 / 3</div>
+  <img src="C:\Users\FESTIMGASHI\Desktop/park narodowy valbona.jpg" style="width:100%">
+  <div class="text"> Lugina e Valbones </div>
+</div>
+
+<a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+<a class="next" onclick="plusSlides(1)">&#10095;</a>
+
+</div>
+<br>
+
+<div style="text-align:center">
+  <span class="dot" onclick="currentSlide(1)"></span> 
+  <span class="dot" onclick="currentSlide(2)"></span> 
+  <span class="dot" onclick="currentSlide(3)"></span> 
+</div>
+
+<script>
+var slideIndex = 1;
+showSlides(slideIndex);
+
+function plusSlides(n) {
+  showSlides(slideIndex += n);
+}
+
+function currentSlide(n) {
+  showSlides(slideIndex = n);
+}
+
+function showSlides(n) {
+  var i;
+  var slides = document.getElementsByClassName("mySlides");
+  var dots = document.getElementsByClassName("dot");
+  if (n > slides.length) {slideIndex = 1}    
+  if (n < 1) {slideIndex = slides.length}
+  for (i = 0; i < slides.length; i++) {
+      slides[i].style.display = "none";  
+  }
+  for (i = 0; i < dots.length; i++) {
+      dots[i].className = dots[i].className.replace(" active", "");
+  }
+  slides[slideIndex-1].style.display = "block";  
+  dots[slideIndex-1].className += " active";
+}
+</script>
+
+</body>
+</html> 
+
+
+<div class="korniza">
+
+<p>
+Shqiperia është e pasur me shumë bukuri natyrore. Nisur nga ujëvarat e deri te shpellat, malet e larta… janë arsyje në vete për ta vizituar Shqiperine dhe për t’i parë e për t’i përjetuar nga këto bukuri nga afër. 
+Me poshte ju sjellim disa nga bukuritë natyrore në Shqiperi.
+</p>
+<br><br>
+
+
+<p style="font-size:18pt;"> Alpet e Shqiperise </p>
+<p>
+Një nga territoret më atraktive dhe më magjepse të trevave shqiptare me bukuri të shumta natyrore dhe pasuri të mëdha turistike, janë Alpet shqitare.
+Monumentet e shumta natyrore si kanioni i Shoshaj, i Valbonës, i Cemit, shpella e Dragobisë, e majës së Arapit, shpella e Rrathëve, shpella e Akullit, shpella e Haxhisë, shpella e Njerzëve të Lagur, burimi i Shoshaj, Valbonës, Okolit, Shtrazës, Kirit, Koprishtit, Vuklit etj ujëvara e Thethit, Grunasit, etj si dhe biomunumentet e shumta si ahishta e Gurra e Hasan Gashit, rrobulli në liqenin Ponarëve, bredhishta e Rragamit, pisha Flamur e qafës së Pejës, Habitati i Salamandrës, rrapi i Toplanës janë një tregues shumë domethënës për pasuritë e mëdha natyrore të kësaj zone në funksion të turizmit. Kësaj i shtohet ekzistenca e zonave të mbrojtura si Parku kombëtar i Thethit, Parku kombëtar i Valbonës, të cilat janë një garanci për jetëgjatësinë e këtyre bukurive natyrore jo vetëm në të tashmen por edhe në të ardhmen. Një potencial tjetër i çmuar i Alpeve shqiptare është pasuria kulturore, mikëpritja dhe bujaria e madhe banorëve të zonës. Disa nga zonat më të njohura turistike të Alpeve janë Thethi, Razma, Valbona, Vermoshi,etj. Këtu duhet shtuar edhe lugina e Drinit me bukuri epike, ku një udhëtim me traget nga Fierza për në Koman do të linte impresione të paharrueshme edhe për vizitorët më indiferent. </p><br>
+
+
+
+<!--Perdorimi i abbr -->
+<p style="font-size:18pt;"> Parku Nacional Theth </p>
+<p>Bukuritë e papërsëritshme të Thethit malor, në zemër të Alpeve shqiptare, e bëjnë që të zërë një vend të rëndësishëm në natyrën dhe turizmin shqiptar.
+
+Pika turistike e Thethit rrethohet nga male të larta dhe qafa mahnitëse, ku aplikohen sportet malore dhe shëtitjet në natyrë.
+
+Pylli është mjaft i pasur edhe me shpendë  e kafshë të ndryshme.
+
+Përveç kanionit, në Theth gjenden një numër i konsiderueshëm shpellash, por ato që kanë tërhequr vëmendjen e shumë alpinistëve janë Shpella e Harapit dhe Bira e Rrathëve, të cilat me përmasat e tyre dhe dukuritë interesante që mbartin brenda tyre janë bërë shkak i shumë legjendave të krijuara nga vetë banorët e zonës.
+
+Këto janë disa prej arsyeve që shumë vizitor të huaj dhe vendas, vijnë në Theth në çdo stinë.
+
+Edhe në këto ditë me shi dhe të ftohta, drejt lartësive të Thethit janë ngjitur mjaftë turist të ardhur nga Evropa Lindore
+<abbr title="Sindromi Primenstrual">PMS</abbr> . </p><br>
+
+<p style="font-size:18pt;"> Lugina e Valbones </p>
+<p>Të bësh një udhëtim në vjeshtë, në Luginën e Valbonës, duhet të përgatitesh jo vetëm materialisht për çfarë do të marrësh me vete, por në radhë të parë shpirtërisht, për të përballuar dhe shijuar nga ana emocionale, bukuritë befasuese të këtij parku kombëtar verior të Shqipërisë, i cili tashmë është shumë i vizituar jo vetëm nga të huajt por edhe nga mjaft shqiptarë, të ngopur me detin e të etur për aventurë.
+
+Valbona nuk është thjesht një destinacion natyror i Shqipërisë, ajo është një kompleksitet dukurish interesante, si e gjithë pjesa tjetër e Alpeve Shqiptare, që ngërthen bashkë të gjitha kuptimet e së bukurës. Valbona u tregon udhëtarëve madhështinë e saj përmes maleve hijerënda, thellësinë e saj përmes pyjeve e humnerave, pastërtinë e saj përmes ujit të kristaltë ku vallëzojnë troftat e arta, mikpritjen e saj përmes njerëzve të mrekullueshëm që ka, bukurinë e saj përmes veshjeve shumëngjyrëshe të zonës. Çfarëdo faqeje që t’ju tregojë Valbona, është një sinonim i së bukurës. Edhe rruga për në Valbonë është një vrapim i bukur mes malesh e ujrash, nëpër luginën e Fierzës, ku vjeshta ka mundur të ndryshkë vetëm shkurret e shpateve të thyera, duke e kthyer peisazhin në një spektakël të vërtetë gjyrash – nuanca të së kuqes – që pasqyrohen mbi syprinën e gjelbër të liqenit. </p><br>
+
+
+
+<p>Komente:</p>
+<form>
+<textarea rows="6" cols="60" placeholder="Komento"></textarea>
+<br>
+<form  name=myform>
+<input type=button value="Posto" 
+onClick="alert('Komenti juaj &#235sht&#235 postuar me sukses!')" 
+style="height:30px; width:100px; border-radius:10px; 
+font-weight:bold;font-size:12pt; font-family:Arial"  >
+</form>
+</div>
