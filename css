@@ -1,24 +1,9 @@
-*{
-margin:0;
-padding:0;
-}
-div{
-	 color:white;
-    background-color:#282828;
-    padding:20px 5px 50px 20px;
-}
-body{
-	background-color: #eee
-}
-nav{
-	width:100%;
-	height:60px;
-	background-color: #383838;
-}
-
-
-
-.class_search1 
+	body
+	{
+		background-color: black;
+	}
+	/*search our website*/
+	.class_search1 
 	{ 
 		float:right; 
 		background-color:		#484848; 
@@ -28,8 +13,10 @@ nav{
 		width:170px; 
 		border-radius:6px; 
 		font-size:12px;
+		 outline: none;
+		   border: none;
 	} 
-			
+			/*search our website*/
 	.class_search2 
 	{ 
 		float:right; 
@@ -40,17 +27,11 @@ nav{
 		width:100px; 
 		border-radius:6px; 
 		font-size:15px;
+		 outline: none;
+		   border: none;
 	}  
-	.class_search3
-	{
-	background-color:green;
-		height:30px; 
-		width:100px; 
-		border-radius:6px; 
-		font-size:15px;
-		}
-		
 	
+	/* pjesa e dyte me tri foto dhe tekst */
 	* 
 	{
 		box-sizing: border-box;
@@ -69,21 +50,26 @@ nav{
 		clear: both;
 		display: table;
 	}
+	/* vija poshte footer-it */
 	hr.new1 
 	{
 		border-top: 1px solid grey;
 	}  
+	/* vija krejt nfillim */
 	hr.new2
 	{
 	border-top: 1px solid green;
 	}
+	/* fotot npjese e dyte me tekst rreth */
 	.img-round {
     border-radius: 50%;
-}
+} 
+/* fotot npjesen e dyte me tekst katror */
 .square 
 	{
 	background-color: #555;
 }
+/* pjese e dyte me tekst background-i */
 #w{
 background-color:white;
 }
@@ -94,7 +80,7 @@ background-color:white;
   position: relative;
   font-family: Arial;
 }
-
+/* pjese e gjelbert qe supozohet  me kane galeri */
 .text-block {
   position: absolute;
   bottom: 20px;
@@ -106,6 +92,7 @@ background-color:white;
   height:100px; 
   width:500px;
 }
+/* shigjetat npjesen e gjelbert qe supozohet me kane galeri */
 .next {
   background-color: 	#000000;
   color: white;
@@ -114,6 +101,7 @@ background-color:white;
   background-color: 	#000000;
   color: white;
 }
+/*butonin search krejt nfillim te search website */
 .button {
         float:right; 
 		background-color:green; 
@@ -127,13 +115,14 @@ background-color:white;
 		   outline: none;
 		   border: none;
 }
-
+/* kur e qet kursorin mbi search-in e pare */
 .button:hover {background-color: #3e8e41}
 
 .button:active {
   background-color: #3e8e41;
   transform: translateY(4px);
 }
+/* table per homepage ... */
  .btn {
   background-color:black;
   border: 1;
@@ -142,111 +131,13 @@ background-color:white;
   text-align: center;
   font-size: 16px;
   margin: 4px 2px;
-  transition: 0.3s;
+  cursor: pointer;
 }
-
+/* ngjyra qe ndryshon kur e vendosim kursorin mbi tabelen e homepage .. */
 .btn:hover {
   background-color: #303030;
   color: white;
-}
-
-.slideshow-container {
-  max-width: 1000px;
-  position: relative;
-  margin: auto;
-}
-
-.mySlides {
-  display: none;
-}
-
-.prev,
-.next {
-  cursor: pointer;
-  position: absolute;
-  top: 50%;
-  width: auto;
-  margin-top: -22px;
-  padding: 16px;
-  color: white;
-  font-weight: bold;
-  font-size: 18px;
-  transition: 0.6s ease;
-  border-radius: 0 3px 3px 0;
-  user-select: none;
-}
-
-.next {
-  right: 0;
-  border-radius: 3px 0 0 3px;
-}
-
-.prev:hover,
-.next:hover {
-  background-color: rgba(0, 0, 0, 0.8);
-}
-
-.text {
-  color: #f2f2f2;
-  font-size: 15px;
-  padding: 8px 12px;
-  position: absolute;
-  bottom: 8px;
-  width: 100%;
-  text-align: center;
-}
-
-.numbertext {
-  color: #f2f2f2;
-  font-size: 12px;
-  padding: 8px 12px;
-  position: absolute;
-  top: 0;
-}
-
-.dot {
-  cursor: pointer;
-  height: 15px;
-  width: 15px;
-  margin: 0 2px;
-  background-color: #bbb;
-  border-radius: 50%;
-  display: inline-block;
-  transition: background-color 0.6s ease;
-}
-
-.active,
-.dot:hover {
-  background-color: #717171;
-}
-
-.fade {
-  -webkit-animation-name: fade;
-  -webkit-animation-duration: 1.5s;
-  animation-name: fade;
-  animation-duration: 1.5s;
-}
-
-@-webkit-keyframes fade {
-  from {
-    opacity: 0.4;
-  }
-  to {
-    opacity: 1;
-  }
-}
-
-@keyframes fade {
-  from {
-    opacity: 0.4;
-  }
-  to {
-    opacity: 1;
-  }
-}
-html,body{
-    height: 100%;
-
+  table-layout:fixed;
 }
 .footer {
     background: #282828;
@@ -295,7 +186,7 @@ html,body{
     background: #303030;
     border:none;
 }
-.btn {
+.btm {
 padding:.7rem;
 border-radius: 7px;
 background-color: #4CAF50;
@@ -317,4 +208,73 @@ background-color: #4CAF50;
     padding-top: 10px;
 
 }
+div.korniza
+   {
+  background-color:#ffffff;
+  border:1px solid black;
+  opacity:0.6;
+  }
 
+  div.korniza p
+   {
+  margin:5px 5px;
+  font-weight:bold;
+  color:black;
+  }
+  
+div.alfa
+   {
+  margin-top:5%;
+  margin-left:5%;
+ }
+ 
+a:hover
+   {
+  color:white;
+ }
+body
+{
+height:100%;
+background-attachment:fixed;
+}
+
+a:link 
+{
+font-weight:bold;
+font-size:120%;
+width:200px;
+color:white;
+text-decoration:none;
+}  
+ 
+a:visited 
+{
+color:white;
+text-decoration:none;
+}
+
+a:hover
+{
+font-size:18px;
+color:red;
+}
+
+table
+{
+width:100%;
+height:50px;	
+padding:0px;
+}
+
+th
+{
+color:white;
+padding:5px;
+}
+
+td
+{
+color:white;
+text-align:left;
+padding:2px;
+}
