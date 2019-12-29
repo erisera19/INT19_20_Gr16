@@ -1,6 +1,11 @@
-	body
+	header{
+    background-color: #282828;
+  }
+
+
+  body
 	{
-		background-color: black;
+		background-color: white;
 	}
 	/*search our website*/
 	.class_search1 
