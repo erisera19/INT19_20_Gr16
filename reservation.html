@@ -54,4 +54,98 @@ img
 	
 }
 </style>
+</head>
 
+<div id="reservation">
+
+<b>
+<h1 style="text-align:center;">Reservation</h1>
+<!--Perdorimi i abbr-->
+<a href="C:\Users\FESTIMGASHI\Desktop/Index.html"><abbr title="Homepage"><img src="C:\Users\FESTIMGASHI\Desktop/home.jpg"></a>
+
+<form>
+
+Name <input type="text" name="Emri"> 
+<br>
+<br>
+Lastname <input type="text" name="Mbiemri"><br><br>
+Sex:<input type="radio" name="sex" value="Male">Male
+	   <input type="radio" name="sex" value="Female">Female <br><br>
+How many people?
+<select name="How many people?">
+<option value=""></option>
+<option value="1 adult">1 adult</option>
+<option value="2 adults">2 adults</option>
+<option value="3 adults">3 adults</option>
+<option value="4 adults">4 adults</option>
+
+
+</select>
+
+
+No children:
+<select name="No Children">
+<option value=""></option>
+<option value="1">1</option>
+<option value="2">2</option>
+<option value="3">3</option>
+<option value="4">4</option>
+</select> 
+<br><br>
+
+Destination :
+<select name="City">
+<option value=""></option>
+<option value="Karaburun">Karaburun</option>
+<option value="Porto Palermo">Porto Palermo</option>
+<option value="Jale">Jale</option>
+<option value="Peje">Peje</option>
+<option value="Albanian Alps">Albanian Alps</option>
+</select>
+<br>
+<br>
+Hotel :
+<select name="Hotel">
+<option value=""></option>
+<option value="Karaburun"></option>
+<option value="Porto Palermo"></option>
+<option value="Jale"></option>
+<option value="Peje"></option>
+<option value="Albanian Alps"></option>
+</select>
+
+<div class="box">
+         									<p>
+         										<label>Check-in date:</label>
+         										<input type="date" name='date'/>
+         									</p>
+         									<p>
+         										<label>Check-out data:</label>
+         										<input type="date" name='date'/>
+         									</p>
+         								</div>
+<br>
+Phone Number: <input type="text" name="NumriTelefonit" cols="30"><br><br>
+
+Extra information:<br>
+<em>
+<textarea rows="5" cols="40" placeholder="Search Our Website...">
+</textarea>
+</em>
+<br><br>
+
+<input type=reset value="Reserve" onClick="alert('Your reservation is confirmed!')" 
+style="height:30px; width:100px; border-radius:10px; font-weight:bold;font-size:12pt; font-family:Arial"  >  
+
+<input type=reset  value="Cancel" onClick="alert('Your reservation is cancelled!')" 
+style="height:30px; width:100px; border-radius:10px; font-weight:bold;font-size:12pt; font-family:Arial"  >   
+
+</form>
+</b>
+
+
+
+
+</div>
+</body>
+</html>
