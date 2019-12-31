@@ -3,99 +3,290 @@
 <head>
 
 
-<style>
+  <style>
 
-body
-{
-background-color: black;
+	
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+    
+    body {
+      font-family: Raleway;
+      background-color: #202125;
+    }
+    
+    .heading {
+        text-align: center;
+        font-size: 2.0em;
+        letter-spacing: 1px;
+        padding: 40px;
+        color: white;
+    }
+    
+    .gallery-image {
+      padding: 20px;
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+    }
+    .gallery-image img {
+  height: 250px;
+  width: 350px;
+  transform: scale(1.0);
+  transition: transform 0.4s ease;
+}
+
+.img-box {
+  box-sizing: content-box;
+  margin: 10px;
+  height: 250px;
+  width: 350px;
+  overflow: hidden;
+  display: inline-block;
+  color: white;
+  position: relative;
+  background-color: white;
+}
+
+.caption {
+  position: absolute;
+  bottom: 5px;
+  left: 20px;
+  opacity: 0.0;
+  transition: transform 0.3s ease, opacity 0.3s ease;
+}
+
+.transparent-box {
+  height: 250px;
+  width: 350px;
+  background-color:rgba(0, 0, 0, 0);
+  position: absolute;
+  top: 0;
+  left: 0;
+  transition: background-color 0.3s ease;
+}
+
+.img-box:hover img { 
+  transform: scale(1.1);
+}
+
+.img-box:hover .transparent-box {
+  background-color:rgba(0, 0, 0, 0.5);
+}
+
+.img-box:hover .caption {
+  transform: translateY(-20px);
+  opacity: 1.0;
+}
+
+.img-box:hover {
+  cursor: pointer;
+}
+
+.caption > p:nth-child(2) {
+  font-size: 0.8em;
+}
+
+.opacity-low {
+  opacity: 0.5;
 }
 div.korniza
   {
-  background-color:#ffffff;
-  border:1px solid black;
+ 
   opacity:0.6;
   }
-div.korniza p
-  {
-  margin:5px 5px;
-  font-weight:bold;
-  color:black;
-  }
-  
-div.alfa
-  {
-  margin-top:5%;
-  margin-left:15%;
-  }
-a:hover
-  {
-  color:grey;
-  }
+  .footer{
+    background: #282828;
+    color: #d3d3d3;
+    height: 400px;
+    position: relative;
+    font-family: Times, Times New Roman, serif;
+
+}
+
+.footer .footer-content
+{
+    border-bottom: 1px solid #686868;
+    height: 350px;
+    display: flex;
+
+}
+.footer .footer-content h1,
+ {
+    font-family: "Times New Roman", Times, serif;
+    font-weight: bold;
+}
+
+.footer .footer-content .footer-section
+{
+    flex: 1;
+    padding-top: 40px;
+    padding-bottom: 40px;
+    padding-left:20px;
+    padding-right:20px;
+    display: inline-block;
+
+}
+.footer .footer-content .newsletter-form .contact-input
+{
+    background: #404040; 
+    width: 400px;
+    margin-bottom: 10px;
+    line-height: 1.5rem;
+    padding: .6rem 1.2rem;
+    border:none;
+    border-radius: 7px;
+
+}
+.footer .footer-content .newsletter-form .contact-input:hover {
+    background: #303030;
+    border:none;
+}
+.btm {
+padding:.7rem;
+border-radius: 7px;
+background-color: #4CAF50;
+  border: none;
+  color: white;
+  text-decoration: none;
+  margin: 4px 2px;
+  cursor: pointer;
+}
+.footer .footer-bottom
+{
+    background: #282828;
+    
+    height: 30px;
+    width: 100%;
+    position:absolute;
+    bottom: 0px;
+    left:0px;
+    padding-top: 10px;
+
+}
+
 </style>
+
 
 
 </head>
 <body>
 
-<div>
-<table>
-<tr>
-  <td>
-    <h1>Untainted</h1>
-    <p>Free PSD Website Template</p>
-  </td>
-  <td>
-    
-    <form id="search">
-    <input class="class_search2" type="submit" name="Search" value="Search">
-    <input class="class_search1" type="text" name="Search" placeholder="Search Our Website...">
-    </form>
-  </td>
-</tr>
-</table>
-<br><br><br>
-</div> 
 
-
-<table border="1" cellspacing="1">
-  <tr>
-    <th><a target='_top'>HOMEPAGE </a></th>
-    <th><a target='_top'>STYLEDEMO  </a></th>
-    <th><a target='_top'>FULLWIDTH  </a></th>
-    <th><a target='_top'>DROPDOWN   </a></th>
-    <th><a target="_top">GALLERY </a></th>
-    <th><a target="_top">PORTFOLIO </a></th>
-    <th><a target="_top">A LINK TEXT </a></th>
-  </tr>
-</table>
 <br>
 
 
-<div class="alfa">
+<div class="gallery-image">
+  <div class="img-box">
+ <a href="plazhe.html"> <img  src="foto/download.jfif" alt="beaches"></a>
+    <div class="transparent-box">
+      <div class="caption">
+        <p>Plazhe</p>
+      </div>
+    </div> 
+</div>
 
-<a href='beaches.html'><img id="imazhi" src="C:\Users\FESTIMGASHI\Desktop/download.jfif"  border="2" 
- width="400" height="220" style="margin-top:50px; margin-left:50px;" alt="beaches">
- </a>
 
-<a href='mountains.html'><img src="C:\Users\FESTIMGASHI\Desktop/durmitor.jpg" border="2"
- width="400" height="220" style="margin-top:50px; margin-left:50px;" alt="mountains">
- </a>
-
- 
 <div class="korniza" style="width:400px; height:150px;margin:5px 50px;">
-<h4><a href="beaches.html">Plazhe e pa prekura shqiptare</a></h4>
- <p>Shpella, gjire të virgjëra, vendndodhje historike, parqe arkeologjike, kala e kisha të lashta.
-    Mjafton dëshira për t’i vizituar [...]</p>
+<h4><a href="plazhe.html">Plazhe e pa prekura shqiptare</a></h4>
+<p>Shpella, gjire të virgjëra, vendndodhje historike, parqe arkeologjike, kala e kisha të lashta.
+  Mjafton dëshira për t’i vizituar [...]</p>
 </div>
 
-<div class="korniza" style="width:400px; height:150px; margin:-157px 509px;">
+<br>
+
+  <div class="img-box">
+   <a href="mountains.html"><img src="foto/durmitor.jpg"  alt="mountains"></a>
+    <div class="transparent-box">
+      <div class="caption">
+        <p>Malet</p>
+        
+      </div>
+    </div>
+  </div>
+ <div class="korniza" style="width:400px; height:150px; margin:-157px 509px;">
 <h4><a href="mountains.html">Malet e bukur te Shqiperise </a></h4>
- <p>“E “stolisur” me Alpe dhe male nga më të bukurit në botë dhe me një natyrë të mahnitshme, Shqipërisë nuk i mungon asgjë për të qenë një mrekulli apo një “diamant” i Europës [...] </p>
+<p>“E “stolisur” me Alpe dhe male nga më të bukurit në botë dhe me një natyrë të mahnitshme, Shqipërisë nuk i mungon asgjë për të qenë një mrekulli apo një “diamant” i Europës [...] </p>
 </div>
-</div>
-
+<footer>
+  <div class="footer">
+ 
+    <div class="footer-content">
+      <div class="footer-section latestpost">
+        <h2>LATEST POST(S)</h2>
+        <br> <br>
+ 
+        
+        <h3>Post title</h3>
+        <h4>Posted by Admin on 26.12.2019</h4>
+        <br>
+        <div class="read-more">
+ 
+          Lastest posts that the admins have posted lately,
+           where you can see the  different untainted places
+          (places that aren't touched).You can see the beauty of these untainted places by looking at our photos we have posted for you.
+           </div>
+ </div>
+ 
+      
+      <div class="footer-section contact ">
+        <h2>CONTACT DETAILS</h2>
+        <br> <br> 
+ 
+         <p>FEF Company <br/> 
+           Street Name&Number <br/>
+            Town <br/>
+            Postcode/zip
+        </p>
+        <br> 
+        <a href="new.html">Click here for a Map to find us »</a>
+        <br>
+        <p> Tel:048-555-666<br/>
+          Fax:038-222-444 <br/>
+        <ul>
+     <li><span style="color:#000000; text-decoration:none;"><a href="MAILTO:fortunagashi@hotmail.com">visitalbania@hotmail.com</a></span></li>
+     </ul></p>
+         
+ 
+      </div>
+      <div class="footer-section newsletter-form">
+        <h2>NEWSLETTER</h2> 
+        <br> <br>
+        <p>If you are interested to be part of our journey please submit your name and email down below and we will make sure to contact you in the near future:</p>
+        <br>
+        <form action="index.html" method="post">
+        <input type="text" placeholder="Name" name="Emri" class="contact-input" /> <br/>
+        <input type="email" placeholder="Email" name="Email" class="contact-input"/><br/>
+     
+        <button type="submit" class="btm">SUBMIT</button>
+              </form>
+ 
+ 
+ 
+      </div>
+ 
+    </div>
+ 
+ 
+    
+ </footer>
+ 
+ <hr class="new1">
+ <table>
+   <tr>
+     <td style="text-align:left;">
+       <p style="color:white;">Copyright &copy; 2013 Domain Name - All Rights Reserved<p>
+     </td>
+     <td style="text-align:right;">
+       <p style="color:white;">Templates by CS Tamples</p>
+     </td>
+   </tr>
+ </table>
+ </body>
+ </html>
 
 
  
-</body>
-</html>
+
