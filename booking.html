@@ -1,0 +1,492 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+	     <meta charset="utf-8">
+	     <meta name="viewport" content="device-width, initial-scale=1.0"/>
+	     <meta http-equiv="X-UA-Compatible" content="ie-edge"/>
+	     <title>Booking</title>
+	     <style>
+	     	
+	     	.slideimg
+	     	{
+	     		height: 400px;
+	     		width: 500px;
+	     		vertical-align: middle;
+	     	}
+
+	     	
+	     .lobbyimg
+	     {
+	     	height: 400px;
+	     	width: 800px;
+	     }
+	    .text1{
+	    font-family: Plantin, Georgia, serif;
+        font-size: 15px;
+        line-height: 25px;
+        margin-bottom: 1em;
+        text-align: left;
+}
+p
+{
+	display: block;
+    margin-block-start: 1em;
+    margin-block-end: 1em;
+    margin-inline-start: 0px;
+    margin-inline-end: 0px;
+}
+ul
+{
+	list-style-type: square;
+	padding right: 20px;
+	color: black;
+	font-style: Andale Mono, monospace;
+}
+.section {
+	position: relative;
+	height: 100vh;
+}
+
+.section .section-center {
+	position: absolute;
+	top: 50%;
+	left: 0;
+	right: 0;
+	-webkit-transform: translateY(-50%);
+	transform: translateY(-50%);
+}
+
+#booking {
+	font-family: 'Montserrat', sans-serif;
+}
+
+.booking-form {
+	padding: 0px 40px 40px;
+	max-width: 450px;
+	width: 100%;
+	margin: auto;
+	background: #2d343b;
+}
+
+.booking-form .form-header {
+	padding: 20px;
+	margin: 0px -40px 30px;
+	background: #1a1f24;
+}
+
+.booking-form .form-header h1 {
+	font-weight: 700;
+	text-transform: capitalize;
+	font-size: 25px;
+	margin: 0;
+	color: #fff;
+}
+
+.booking-form .form-group {
+	position: relative;
+	margin-bottom: 30px;
+}
+
+.booking-form .form-control {
+	background-color: #1c2126;
+	height: 50px;
+	padding: 7px 20px 0px;
+	border: none;
+	border-radius: 0px;
+	-webkit-box-shadow: none;
+	box-shadow: none;
+	color: #fff;
+}
+
+
+.booking-form .form-label {
+	position: absolute;
+	top: 15px;
+	left: 20px;
+	text-transform: uppercase;
+	color: #2d343b;
+	font-weight: 700;
+	line-height: 24px;
+	height: 24px;
+	font-size: 16px;
+	pointer-events: none;
+	-webkit-transition: 0.2s all;
+	transition: 0.2s all;
+}
+
+.booking-form .form-group.input-not-empty .form-label {
+	top: -10px;
+	color: #fff;
+	font-size: 14px;
+}
+
+.booking-form .form-group:not( .input-not-empty) .form-control:not( :focus) {
+	color: transparent;
+}
+
+.booking-form .form-group .form-control:focus+.form-label {
+	top: -10px;
+	color: #fff;
+	font-size: 14px;
+}
+
+.booking-form .form-checkbox input {
+	position: absolute; 
+	margin-left: -9999px;
+	visibility: hidden; 
+}
+
+.booking-form .form-checkbox label {
+	position: relative;
+	padding-top: 4px;
+	padding-left: 30px;
+	color: #fff;
+	font-weight: 700;
+}
+
+.booking-form .form-checkbox label+label {
+	margin-left: 15px;
+}
+
+.booking-form .form-checkbox input+span {
+	position: absolute;
+	left: 2px;
+	top: 4px;
+	width: 20px;
+	height: 20px;
+	border: 2px solid #1c2126;
+	background: #1c2126;
+	border-radius: 50%;
+}
+
+.booking-form .form-checkbox input:checked+span {
+	border-color: #f7c411;
+}
+
+.booking-form .form-checkbox input+span:after {
+	content: '';
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	width: 0px;
+	height: 0px;
+	border-radius: 50%;
+	background-color: #f7c411;
+	-webkit-transform: translate(-50%, -50%);
+	transform: translate(-50%, -50%);
+	-webkit-transition: 0.2s all;
+	transition: 0.2s all;
+}
+
+.booking-form .form-checkbox input:not(:checked)+span:after {
+	opacity: 0;
+}
+
+.booking-form .form-checkbox input:checked+span:after {
+	opacity: 1;
+	width: 10px;
+	height: 10px;
+}
+
+.booking-form .submit-btn {
+	color: #1c2126;
+	background-color: #f7c411;
+	font-weight: 700;
+	height: 50px;
+	border: none;
+	padding: 0px 50px;
+}
+.footer {
+    background: #282828;
+    color: #d3d3d3;
+    height: 400px;
+    position: relative;
+    font-family: Times, Times New Roman, serif;
+
+}
+
+.footer .footer-content
+{
+    border-bottom: 1px solid #686868;
+    height: 350px;
+    display: flex;
+
+}
+.footer .footer-content h1,
+ {
+    font-family: "Times New Roman", Times, serif;
+    font-weight: bold;
+}
+
+.footer .footer-content .footer-section
+{
+    flex: 1;
+    padding-top: 40px;
+    padding-bottom: 40px;
+    padding-left:20px;
+    padding-right:20px;
+    display: inline-block;
+
+}
+.footer .footer-content .newsletter-form .contact-input
+{
+    background: #404040; 
+    width: 400px;
+    margin-bottom: 10px;
+    line-height: 1.5rem;
+    padding: .6rem 1.2rem;
+    border:none;
+    border-radius: 7px;
+
+}
+.footer .footer-content .newsletter-form .contact-input:hover {
+    background: #303030;
+    border:none;
+}
+.btm {
+padding:.7rem;
+border-radius: 7px;
+background-color: #4CAF50;
+  border: none;
+  color: white;
+  text-decoration: none;
+  margin: 4px 2px;
+  cursor: pointer;
+}
+.footer .footer-bottom
+{
+    background: #282828;
+    
+    height: 30px;
+    width: 100%;
+    position:absolute;
+    bottom: 0px;
+    left:0px;
+    padding-top: 10px;
+
+}
+/* vija poshte footer-it */
+	hr.new1 
+	{
+		border-top: 1px solid grey;
+	}  
+	/* vija krejt nfillim */
+	hr.new2
+	{
+	border-top: 1px solid green;
+	}
+
+</style>
+<script >
+     	var i=0;
+     	var slide_img=[];
+     	var time=3000;
+
+     	slide_img[0]='img/room1.jpeg';
+        slide_img[1]='img/room2.jpeg';
+     	slide_img[2]='img/room3.jpeg';
+     
+     	
+       
+     	function changeImg()
+     	{
+     		document.slide.src=slide_img[i];
+
+     		if(i<slide_img.length-1)
+     		{
+     			i++;
+     		}else
+     		{
+     			i=0;
+     		}
+
+     		setTimeout("changeImg()",time);
+     	}
+     	window.onload=changeImg;
+     </script>
+
+<body>
+	
+	<table> 
+	     		<tr>
+	     			<td>
+	     		     		<img name="slide" class="slideimg">
+	     		 </td>
+	     		 <td>
+	     		 <div class="text1">
+	     			<h2>Rooms&Suits</h2>
+	     			<br>
+	     			<p>The 25 guestrooms and 4 apartments range from 15 to 55 square meters, <br>
+	     			    and all offer a bathroom with a bathtub,shower, or both.<br>
+	     			    While the 15-square-meter Family Room features bunk beds for children,<br>
+	     			    the 23-square-meter Deluxe South, the 19-square-meter Superior Room,<br>
+	     			    and the 55-square-meter Apartment South Chandolines all boast a king-size bed.<br>
+	     			    The 19-square-meter Premium South room and the 35-to-39-square-meter Suite North<br>
+	     			    South play host to a queen-size bed. The Apartment South Chandolines and the Suite North<br>
+	     			    South also include a living room and a sofa bed that sleeps two children, <br>
+	     			    and apart from the Family Room and the Superior Room, all guestrooms feature a terrace or balcony.</p>
+	     		</div>
+	     		</td>
+	     	</tr>
+	     	</table>
+	     	<table>
+		<tr>
+	  <td>
+	<h2>OUR SERVICES</h2>
+	<ul>
+	<li>Room service</li>
+	<li>Air heating&cooling in all rooms</li>
+	<li>Free Wi-fi in the entire hotel</li>
+	<li>Restaurant&Bar</li>
+	<li>Breakfast buffet 06.30am-10.30am</li>
+	<li>Dinner from 17:30pm-22:30pm</li>
+	<li>24-hour reception</li>
+	<li>Coffee and tea facilities in all rooms</li>
+	<li>Business lounge</li>
+	<li>Parking space</li>
+	<li>Fitness center</li>
+	<li>Bike and car rental</li>
+	<li>Allergy friendly rooms</li>
+	<li>Business lounge</li>
+	</ul>
+</td>
+<td>
+	<img src="img/hotelobby.jpg" class="lobbyimg"> 
+</td>
+</tr>
+</table>
+	     	
+	<div id="booking" class="section">
+<div class="section-center">
+<div class="container">
+<div class="row">
+<div class="booking-form">
+<div class="form-header">
+<h1>Book Your Room</h1>
+</div>
+<form>
+<div class="form-group">
+<div class="form-checkbox">
+<label for="single-room">
+<input type="radio" id="single-room" name="room-type">
+<span></span>Single room
+</label>
+<label for="couple-room">
+<input type="radio" id="couple-room" name="room-type">
+<span></span>Couple room
+<label for="family-room">
+<input type="radio" id="family-room" name="room-type">
+<span></span>Family room
+</label>
+</div>
+</div>
+<table>
+	<tr>
+		<td>
+<div class="form-group">
+<input class="form-control" type="date">
+<span class="form-label">Check In</span>
+</div> </td>
+<td>
+<div class="form-group">
+<input class="form-control" type="date">
+<span class="form-label">Check Out</span>
+</div></td>
+</tr>
+</table>
+<div class="form-btn">
+<button class="submit-btn">Book Room</button>
+</div>
+</form>
+</div>
+</div>
+</div>
+</div>
+</div>
+<footer>
+	  <div class="footer">
+	 
+		  <div class="footer-content">
+			  <div class="footer-section latestpost">
+				  <h2>LATEST POST(S)</h2>
+				  <br> <br>
+	 
+				  
+				  <h3>Post title</h3>
+				  <h4>Posted by Admin on 26.12.2019</h4>
+				  <br>
+				  <div class="read-more">
+	 
+					Lastest posts that the admins have posted lately,
+					 where you can see the  different untainted places
+					(places that aren't touched).You can see the beauty of these untainted places by looking at our photos we have posted for you.
+					 </div>
+	 </div>
+	 
+			  
+			  <div class="footer-section contact ">
+				  <h2>CONTACT DETAILS</h2>
+				  <br> <br> 
+	 
+				   <p>FEF Company <br/> 
+					   Street Name&Number <br/>
+					  Town <br/>
+					  Postcode/zip
+				  </p>
+				  <br> 
+
+
+
+				</p>
+				<br> 
+				<a href="map.html">Click here for a Map to find us »</a>
+				<br>
+				<p> Tel:048-555-666<br/>
+					Fax:038-222-444 <br/>
+				<ul>
+		   <li><span style="color:#000000; text-decoration:none;"><a href="MAILTO:fortunagashi@hotmail.com">visitalbania@hotmail.com</a></span></li>
+		   </ul></p>
+				   
+   
+			</div>
+			  <div class="footer-section newsletter-form">
+ 			<h2>NEWSLETTER</h2> 
+ 			<br> <br>
+ 			<p>If you are interested to be part of our journey please submit your name and email down below and we will make sure to contact you in the near future:</p>
+ 			<br>
+ 			<form action="index.html" method="post">
+ 			<input type="text" placeholder="Name" name="Emri" class="contact-input" /> <br/>
+ 			<input type="email" placeholder="Email" name="Email" class="contact-input"/><br/>
+		
+ 			<button type="submit" class="btm">SUBMIT</button>
+             </form>
+
+
+
+ 		</div>
+
+	 
+	 
+	 
+			  </div>
+	 
+		  </div>
+	 
+	 
+		  
+	 </footer>
+	 
+	 <hr class="new1">
+	 <table>
+		 <tr>
+			 <td style="text-align:left;">
+				 <p style="color:white;">Copyright &copy; 2013 Domain Name - All Rights Reserved<p>
+			 </td>
+			 <td style="text-align:right;">
+				 <p style="color:white;">Templates by CS Tamples</p>
+			 </td>
+		 </tr>
+	 </table>
+
+
+	     </body>
