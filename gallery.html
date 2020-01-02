@@ -5,7 +5,24 @@
      <title>Gallery album</title>
      <link rel="stylesheet" href="stiliG.css">
      
-   
+   <script type="text/javascript">
+   	function setbackground()
+{
+window.setTimeout( "setbackground()", 5000); // 5000 milliseconds delay
+var index = Math.round(Math.random() * 4);
+var Color = "FFFFFF"; // default color - white (index = 0)
+if(index == 1)
+Color = "FFCCCC"; 
+if(index == 2)
+Color = "CCAFFF"; 
+if(index == 3)
+Color = "A6BEFF"; 
+if(index == 4)
+Color = "99FFFF"; 
+
+document.getElementsByTagName("body")[0].style.backgroundColor = "#" + Color;
+}
+   </script>
 	 </head>
 
 
@@ -43,7 +60,8 @@
 	 
 	
 	</header>
-	 <body>
+	 <body onload="setbackground();">
+	 	
 	 	<div class="container">
 	 		<div class="box">
 	 			<div class="imgBox">
