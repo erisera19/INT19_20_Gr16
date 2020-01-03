@@ -8,8 +8,35 @@
      <link rel="stylesheet" href="stylesheet2.css"/>
 
 <meta name="viewport" content="width=device-width, initial-scale=1">
-    <script src="https://code.jquery.com/jquery-3.4.1.min.js" integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous">
-    </script>
+	<script src="https://code.jquery.com/jquery-3.4.1.min.js" integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous">
+
+	</script>
+	<script>
+		$(document).ready(function() {
+		 var readMoreHtml = $(".read-more").html();
+		 var lessText = readMoreHtml.substr(0,100);
+		 
+		 if(readMoreHtml.length > 100){
+		  $(".read-more").html(lessText).append("<a href='' class='read-more-link'> Read More &#187 </a>");
+		 }else{
+		  $(".read-more").html(readMoreHtml);
+		 }
+		 
+		 $("body").on("click", ".read-more-link", function(event){
+		  event.preventDefault();
+		  
+		  $(this).parent(".read-more").html(readMoreHtml).append("<a href='' class='read-less-link'> Read Less &#171</a>")
+		 });
+		 
+		 $("body").on("click", ".read-less-link", function(event){
+		  event.preventDefault();
+		  
+		  $(this).parent(".read-more").html(readMoreHtml.substr(0, 100)).append("<a href='' class='read-more-link'> Read More &#187 </a>")
+		 });
+			
+		});
+		</script>
+
 
      <script type="text/javascript">
         function showText(element) {
