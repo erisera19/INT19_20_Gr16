@@ -67,6 +67,34 @@
 			<a class="previous" onclick="prevImage()">&#10095; </a>
 		</div>
 	</div>
+	<!-- Slider - javascript -->
+	<script type="text/javascript">
+		var slider_content = document.getElementById('box');
+
+		var image = ['room5','room3','room1'];
+
+		var i = image.length;
+
+		function nextImage() {
+			if(i < image.length) {
+				i = i + 1;
+			}else {
+				i = 1;
+			}
+			slider_content.innerHTML = "<img class='fiona' src=img/"+image[i-1]+".jpeg>"; 
+		}
+
+		function prevImage() {
+			if(i < image.length+1 && i>1) {
+				i = i - 1;
+			}else {
+				i = image.length;
+			}
+			slider_content.innerHTML = "<img class='fiona' src=img/"+image[i-1]+".jpeg>"; 
+		}
+	
+
+	</script>
 	</header>
 	
 	 <body>
