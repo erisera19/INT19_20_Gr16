@@ -364,14 +364,14 @@ text-decoration:none;
  
 a:visited 
 {
-color:white;
+color:green;
 text-decoration:none;
 }
 
 a:hover
 {
 font-size:18px;
-color:red;
+color:green;
 }
 
 table
@@ -400,3 +400,28 @@ p.show-ellipsis {
       overflow: hidden !important;
       text-overflow: ellipsis;
   }
+
+
+
+
+
+
+
+
+  .content{
+
+    margin: 0 auto;
+    width:500px;
+    padding:10px;
+    min-height:300px;
+    }
+    .read-more{
+    
+    border:1px solid #808080;
+    padding:15px;
+    margin-bottom:20px;
+    }
+    .read-more-link, .read.less-link{
+    text-decoration:none;
+    color:	#808080;
+    }
