@@ -50,6 +50,37 @@
     document.getElementById("result").innerHTML = "Sorry, your browser does not support web storage...";
   }
 }
+	function validation()
+	     	{
+	     		var radio1=document.getElementById('single-room').checked;
+	     		var radio2=document.getElementById('couple-room').checked;
+	     		var radio3=document.getElementById('family-room').checked;
+	     		var PIN=document.getElementById('PIN').value;
+	     		if((radio1=="")&&(radio2=="")&&(radio3==""))
+	     		{
+	     			document.getElementById("errorresult").innerHTML="You should select one room option!";
+                   
+                    return false;
+	     		}
+	     		 if(PIN=="")
+	     		 {
+	     		 	document.getElementById('errorresult1').innerHTML="Your card PIN is required for payment!";
+	     		 	return false;
+	     		 }
+	     		 else if(PIN!=0000){
+	     		 	document.getElementById('errorresult1').innerHTML="Wrong PIN.Try again!";
+	     		 	 document.getElementById('errorresult2').innerHTML="(for project purpose:the PIN is four zeros";
+	     		   return false;
+
+	     		  
+	     		}
+
+	     		else{
+	     		
+	     			return true;
+	     		 
+	     		}
+	     		}
      </script>
 	<header>
 	 <div class="searchF">
