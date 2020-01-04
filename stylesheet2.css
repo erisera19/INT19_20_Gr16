@@ -316,6 +316,7 @@ background-color: #4CAF50;
 
 body
 {
+  margin: 0 auto;
 height:100%;
 background-attachment:fixed;
 }
@@ -379,11 +380,10 @@ p.show-ellipsis {
 
 
   .content1{
-
     margin: 0 auto;
     width:500px;
     padding:10px;
-    min-height:300px;
+    height:100px;
     }
     .read-more{
     
