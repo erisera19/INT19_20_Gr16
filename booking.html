@@ -45,7 +45,7 @@
     } else {
       sessionStorage.clickcount = 1;
     }
-    document.getElementById("result").innerHTML = "You already booked " + sessionStorage.clickcount + " rooms in this session.";
+    document.getElementById("result").innerHTML = "You have clicked the Book room button " + sessionStorage.clickcount+" times in this session";
   } else {
     document.getElementById("result").innerHTML = "Sorry, your browser does not support web storage...";
   }
