@@ -180,7 +180,7 @@
 <div class="form-header">
 <h1>Book Your Room</h1>
 </div>
-<form>
+<form action="#" method="post" onsubmit="return validation();">
 <div class="form-group">
 <div class="form-checkbox">
 <label for="single-room">
@@ -196,6 +196,7 @@
 </label>
 </div>
 </div>
+	<div id="errorresult"></div>
 <table>
 	<tr>
 		<td>
@@ -211,11 +212,13 @@
 </tr>
 </table>
 	<div class="form-group">
-<input class="form-control" type="password">
+<input id ="PIN" class="form-control" type="password">
 <span class="form-label"> CARD PIN</span>
 </div>
+<div id="errorresult1"></div>
+<div id="errorresult2"></div>
 <div class="form-btn">
-<button onclick="bookingCounter()" class="submit-btn" type="button">Book Room</button>
+<button onclick="bookingCounter()" class="submit-btn" type="submit">Book Room</button>
 	<div id="result"> </div>
 </div>
 </form>
