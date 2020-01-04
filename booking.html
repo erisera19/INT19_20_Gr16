@@ -38,6 +38,18 @@
      		setTimeout("changeImg()",time);
      	}
      	window.onload=changeImg;
+	function bookingCounter() {
+  if (typeof(Storage) !== "undefined") {
+    if (sessionStorage.clickcount) {
+      sessionStorage.clickcount = Number(sessionStorage.clickcount)+1;
+    } else {
+      sessionStorage.clickcount = 1;
+    }
+    document.getElementById("result").innerHTML = "You already booked " + sessionStorage.clickcount + " rooms in this session.";
+  } else {
+    document.getElementById("result").innerHTML = "Sorry, your browser does not support web storage...";
+  }
+}
      </script>
 	<header>
 	 <div class="searchF">
@@ -167,8 +179,12 @@
 </div></td>
 </tr>
 </table>
+	<div class="form-group">
+<input class="form-control" type="password">
+<span class="form-label"> CARD PIN</span>
+</div>
 <div class="form-btn">
-<button class="submit-btn">Book Room</button>
+<button onclick="bookingCounter()" class="submit-btn" type="button">Book Room</button>
 </div>
 </form>
 </div>
