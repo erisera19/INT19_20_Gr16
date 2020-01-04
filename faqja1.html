@@ -1,13 +1,14 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <hr class="new2" >
-  <title>Untainted</title>
-  
-  <meta charset="utf-8">
 
-  <style>
-header {
+<title>Untainted</title>
+
+
+
+</head>
+<style>
+	  header {
   background-color: #171b1e;
   font: "Times New Roman", Times, serif;
       font-size: medium;
@@ -65,7 +66,6 @@ header {
   /* menu bar end */
   div.korniza {
       background-color: #ffffff;
-      border: 1px solid black;
       opacity: 0.6;
   }
   
@@ -105,8 +105,7 @@ header {
 
 a:link 
 {
-font-weight:bold;
-font-size:120%;
+font-size:90%;
 width:200px;
 color:white;
 text-decoration:none;
@@ -121,7 +120,7 @@ text-decoration:none;
 a:hover
 {
 font-size:18px;
-color:red;
+
 }
 
 table
@@ -146,36 +145,94 @@ padding:2px;
 
 
 
+  
+  body {
+  padding: 0;
+    margin: 0;
+      background-color: white;
+      font: "Times New Roman", Times, serif;
+      font-size: medium;
+	  background-color:#fff1da;
+  }
+  
+
+
+	/*search our website*/
+	.class_search1 
+	{ 
+		float:right; 
+		background-color:		#484848; 
+		color:#FFCCFF; 
+		text-align:center; 
+		height:30px; 
+		width:170px; 
+		border-radius:6px; 
+		font-size:12px;
+		 outline: none;
+		   border: none;
+	} 
+			/*search our website*/
+	.class_search2 
+	{ 
+		float:right; 
+		background-color:green; 
+		color:#FFCCFF; 
+		text-align:center; 
+		height:30px; 
+		width:100px; 
+		border-radius:6px; 
+		font-size:15px;
+		 outline: none;
+		   border: none;
+	}  
 	
-    * {
-      margin: 0;
-      padding: 0;
-    }
-    hr.new2
-	{
-	border-top: 1px solid green;
-	}
-    
-    body {
-      font-family: Raleway;
-      background-color: #202125;
-    }
-    
-    .heading {
-        text-align: center;
-        font-size: 2.0em;
-        letter-spacing: 1px;
-        padding: 40px;
-        color: white;
-    }
-    
-    .gallery-image {
-      padding: 20px;
-      display: flex;
-      flex-wrap: wrap;
-      justify-content: center;
-    }
-    .gallery-image img {
+  .class_search3 {
+      box-shadow: inset 0px 1px 0px 0px #a4e271;
+      background: linear-gradient(to bottom, #89c403 5%, #77a809 100%);
+      background-color: #89c403;
+      border-radius: 6px;
+      border: 1px solid #74b807;
+      display: inline-block;
+      cursor: pointer;
+      color: #ffffff;
+      font-family: Arial;
+      font-size: 15px;
+      font-weight: bold;
+      padding: 6px 24px;
+      text-decoration: none;
+      text-shadow: 0px 1px 0px #528009;
+  }
+
+.class_search3:hover {
+      background: linear-gradient(to bottom, #77a809 5%, #89c403 100%);
+      background-color: #77a809;
+  }
+  
+  .class_search3:active {
+      position: relative;
+      top: 1px;
+  }
+
+* {
+  margin: 0;
+  padding: 0;
+}
+.heading {
+    text-align: center;
+    font-size: 2.0em;
+    letter-spacing: 1px;
+    padding: 40px;
+    color: white;
+}
+
+.gallery-image {
+  padding: 20px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.gallery-image img {
   height: 250px;
   width: 350px;
   transform: scale(1.0);
@@ -229,24 +286,45 @@ padding:2px;
   cursor: pointer;
 }
 
-.caption > p:nth-child(2) {
-  font-size: 0.8em;
-}
 
-.opacity-low {
-  opacity: 0.5;
-}
-div.korniza
-  {
- 
-  opacity:0.6;
+   {
+  margin:5px 5px;
+  font-weight:bold;
+  color:black;
   }
+  
+div.alfa
+   {
+  margin-top:5%;
+  margin-left:5%;
+ }
   .footer{
     background: #282828;
     color: #d3d3d3;
     height: 400px;
     position: relative;
     font-family: Times, Times New Roman, serif;
+
+}
+
+  .footer{
+    background: #282828;
+    color: #d3d3d3;
+    height: 400px;
+    position: relative;
+    font-family: Times, Times New Roman, serif;
+
+}
+
+.footer {
+padding:0;
+margin:0;
+    background: #171b1e;
+    color: #d3d3d3;
+    height: 400px;
+    position: relative;
+    font-family: Times, Times New Roman, serif;
+    font-size: small;
 
 }
 
@@ -310,187 +388,192 @@ background-color: #4CAF50;
     padding-top: 10px;
 
 }
-hr.new1 
-	{
-		border-top: 1px solid grey;
-	} 
-	table
-{
-width:100%;
-height:50px;	
-padding:0px;
-}
 
-th
-{
-color:white;
-padding:5px;
-}
 
-td
-{
-color:white;
-text-align:left;
-padding:2px;
-}
 
+  
 
 </style>
+	<header>
+		
+	 <div class="searchF">
+	 <table>
+	 <tr>
+		 <td>
+			 <h1>Untainted</h1>
+			 <p>Free PSD Website Template</p>
+		 </td>
+		 <td>
+			 <!--Search-->
+			 <form id="search">
+		 
+			 <button class="button">SEARCH</button>
+			 <input class="class_search1" type="text" name="Search" placeholder="Search Our Website...">
+			 </form>
+		 </td>
+	 </tr>
+	 </table>
+	 <br><br><br>
+	 </div> 
+	 <nav class="topnav">
+
+	
+	
+			 <a href="#home" class="active" >HOME </a>
+			 <a href="faqja1.html">About us  </a>
+			 <a href="Gallery.html">Gallery </a>
+			 <a href="Booking.html">Booking  </a>
+			 <a href="Contact.html">Contact </a>
+		 </nav>
+		 </header>
 
 
 
-</head>
+
 <body>
 
-  <header>
-    <div class="searchF">
-    <table>
-    <tr>
-      <td>
-        <h1>Untainted</h1>
-        <p>Free PSD Website Template</p>
-      </td>
-      <td>
-        <!--Search-->
-        <form id="search">
-      
-        <button class="button">SEARCH</button>
-        <input class="class_search1" type="text" name="Search" placeholder="Search Our Website...">
-        </form>
-      </td>
-    </tr>
-    </table>
-    <br><br><br>
-    </div> 
-    <nav class="topnav">
- 
-   
-   
-        <a href="#home"  >HOME </a>
-        <a href="faqja1.html">About us  </a>
-        <a href="Gallery.html" class="active">Gallery </a>
-        <a href="Booking.html">Booking  </a>
-        <a href="Contact.html">Contact </a>
-      </nav>
-    
-   
-   </header>
+<div class="alfa">
 
+
+<a href="plazhe.html"><img src="C:\Users\FESTIMGASHI\Desktop/plazhe.jpg" style="width:550px; height:300px;margin-left:50px;" alt="kek me prtokall">
+ </a>
+
+<a href="mountains.html"><img src="C:\Users\FESTIMGASHI\Desktop/alpett.jpg"  style="width:550px; height:300px; margin-left:50px;" alt="tiramisu">
+ </a>
+
+ 
+<div class="korniza1" style="width:400px; height:150px;margin:5px 50px;">
+<h4><br><a href="plazhe.html" style="color:black;">Untainted Beaches of Albania</a></h4>
 <br>
-
-
-<div class="gallery-image">
-  <div class="img-box">
-    <img  src="images/plazhe.jpg" alt="beaches"></a>
-    <div class="transparent-box">
-      <div class="caption">
-        <p>Plazhe</p>
-      </div>
-    </div> 
+ <p>Albania’s southern coastline, with its lovely traditional hamlets, cobblestoned streets and
+    small Orthodox churches, has plenty of beautiful beaches lapped by pristine waters. And if 
+	you get your fill of coastal bays, you can head for the natural springs near Saranda or the
+	lake shores near the Macedonian border – Albania has plenty of surprises[...]</p>
 </div>
 
-
-<div class="korniza" style="width:250px; height:150px;margin:5px 20px;text-align:left;">
-  <br>
-<h4><a href="faqja1_pamja1.html">Plazhe e pa prekura shqiptare</a></h4>
-<p>Shpella, gjire të virgjëra, vendndodhje historike, parqe arkeologjike, kala e kisha të lashta.
-  Mjafton dëshira për t’i vizituar [...]</p>
-</div>
-
+<div class="korniza1" style="width:400px; height:150px; margin:-160px 650px;">
+<h4><br><a href="mountains.html" style="color:black;">Picturesque mountains of Albania</a></h4>
 <br>
-
-  <div class="img-box">
-    <img src="images/alpett.jpg"  alt="mountains"></a>
-    <div class="transparent-box">
-      <div class="caption">
-        <p>Malet</p>
-        
-      </div>
-    </div>
-  </div>
-  <div class="korniza" style="width:210px; height:150px;margin:5px 20px;text-align:left;">
-	  <br>
-<h4><a href="faqja1_pamja2.html">Malet e bukur te Shqiperise </a></h4>
-<p>“E “stolisur” me Alpe dhe male nga më të bukurit në botë dhe me një natyrë të mahnitshme, Shqipërisë nuk i mungon asgjë për të qenë një mrekulli apo një “diamant” i Europës [...] </p>
+ <p >If you think that Albania has only gorgeous beaches to offer visitors, think again. One of 
+ the most beautiful things to do in the Land of the Eagles is to spend time relaxing, surrounded 
+ only by nature. The Albanian Alps are among the most spectacular sites to see in the Balkan trail,
+ so if you hate crowds, warm temperature and tourists, avoid the Riviera and come to visit one of the wildest areas of Europe.[...]</p>
 </div>
-<footer>
-  <div class="footer">
- 
-    <div class="footer-content">
-      <div class="footer-section latestpost">
-        <h2>LATEST POST(S)</h2>
-        <br> 
- 
-        
-        <h3>Post title</h3>
-        <h4>Posted by Admin on 26.12.2019</h4>
-        <br>
-        <div class="read-more">
- 
-          Lastest posts that the admins have posted lately,
-           where you can see the  different untainted places
-          (places that aren't touched).You can see the beauty of these untainted places by looking at our photos we have posted for you.
-           </div>
- </div>
- 
-      
-      <div class="footer-section contact ">
-        <h2>CONTACT DETAILS</h2>
-        <br> 
- 
-         <p>FEF Company <br/> 
-           Street Name&Number <br/>
-            Town <br/>
-            Postcode/zip
-          
-          <br> 
-          <a href="map.html">Click here for a Map to find us »</a>
-          <br>
-          <br>
-          <p> Tel:048-555-666<br/>
-            Fax:038-222-444 <br/>
-          <ul>
-       <li><span style="color:#000000; text-decoration:none;"><a href="MAILTO:fortunagashi@hotmail.com">visitalbania@hotmail.com</a></span></li>
-       </ul></p>
-           
-   
+</div>
+ <br><br><br><br><br><br><br><br><br><br><br>
+  <div class="gallery-image">
+    <div class="img-box">
+   <a> <img  src="C:\Users\FESTIMGASHI\Desktop/albaniariviera.jpg" alt="beaches"></a>
+      <div class="transparent-box">
+        <div class="caption">
+          <p>Nature</p>
         </div>
-      <div class="footer-section newsletter-form">
-        <h2>NEWSLETTER</h2> 
-        <br> 
-        <p>If you are interested to be part of our journey please submit your name and email down below and we will make sure to contact you in the near future:</p>
-    
-        <form action="index.html" method="post">
-        <input type="text" placeholder="Name" name="Emri" class="contact-input" /> <br/>
-        <input type="email" placeholder="Email" name="Email" class="contact-input"/><br/>
-     
-        <button type="submit" class="btm">SUBMIT</button>
-              </form>
- 
- 
- 
+      </div> 
+  </div>
+  <br>
+  <div class="img-box">
+     <a><img src="C:\Users\FESTIMGASHI\Desktop/albaniariviera1.jpg" alt="mountains"></a>
+	
+      <div class="transparent-box">
+        <div class="caption">
+          <p>Nature</p>
+		  </div>
       </div>
- 
-    </div>
- 
- 
-    
- </footer>
- 
- <hr class="new1">
- <table>
-   <tr>
-     <td style="text-align:left;">
-       <p style="color:white;">Copyright &copy; 2013 Domain Name - All Rights Reserved<p>
-     </td>
-     <td style="text-align:right;">
-       <p style="color:white;">Templates by CS Tamples</p>
-     </td>
-   </tr>
- </table>
- </body>
- </html>
+	  </div>
+
+ <div class="img-box">
+     <a><img src="C:\Users\FESTIMGASHI\Desktop/albaniariviera2.jpg"  alt="mountains"></a>
+	
+      <div class="transparent-box">
+        <div class="caption">
+          <p>Nature</p>
+		  </div>
+      </div>
+	  </div>
+</body>
+  
+  
+  
+  
+  
+  
+  <footer>
+	  <div class="footer">
+	 
+		  <div class="footer-content">
+			  <div class="footer-section latestpost">
+				  <h2>LATEST POST(S)</h2>
+				  <br> <br>
+	 
+				  
+				  <h3>Post title</h3>
+				  <h4>Posted by Admin on 26.12.2019</h4>
+				  <br>
+				  <div class="read-more1">
+	 
+					Lastest posts that the admins have posted lately,
+					 where you can see the  different untainted places
+					(places that aren't touched).You can see the beauty of these untainted places by looking at our photos we have posted for you.
+					 </div>
+					
+	 <br><br>
+	 <a style="color:green;" href="#">Read More</a>
+	 </div>
+			  
+			  <div class="footer-section contact ">
+				  <h2>CONTACT DETAILS</h2>
+				  <br> <br> 
+	 
+				   <p>FEF Company <br/> 
+					   Street Name&Number <br/>
+					  Town <br/>
+					  Postcode/zip
+				  </p>
+				  <br> 
+				
+				<a href="map.html">Click here for a Map to find us »</a>
+				<br>
+				<p> Tel:048-555-666<br/>
+					Fax:038-222-444 <br/>
+				<ul>
+		   <li><span style="color:#000000; text-decoration:none;">
+			<a href="MAILTO:fortunagashi@hotmail.com">visitalbania@hotmail.com</a></span>
+		</li>
+		   </ul></p>
+				   
+   
+			</div>
+			  <div class="footer-section newsletter-form">
+ 			<h2>NEWSLETTER</h2> 
+ 			<br> <br>
+ 			<p>If you are interested to be part of our journey please submit your name and email down below and we will make sure to contact you in the near future:</p>
+ 			<br>
+ 			<form action="index.html" method="post">
+ 			<input type="text" placeholder="Name" name="Emri" class="contact-input" /> <br/>
+ 			<input type="email" placeholder="Email" name="Email" class="contact-input"/><br/>
+		
+ 			<button type="submit" class="btm">SUBMIT</button>
+             </form>
 
 
- 
 
+ 		</div>
+
+	 
+			  </div>
+	
+	 
+<table>
+	<tr>
+			 <td style="text-align:left;">
+				 <p style="color:white;">Copyright &copy; 2013 Domain Name - All Rights Reserved</p>
+			 </td>
+			 <td style="text-align:right;">
+				 <p style="color:white;">Templates by CS Tamples</p>
+			 </td>
+		 </tr>
+	 </table>
+	</footer>
+	 </html>
+
+	
