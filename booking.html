@@ -45,11 +45,42 @@
     } else {
       sessionStorage.clickcount = 1;
     }
-    document.getElementById("result").innerHTML = "You already booked " + sessionStorage.clickcount + " rooms in this session.";
+    document.getElementById("result").innerHTML = "You have clicked the Book room button " + sessionStorage.clickcount+" times in this session";
   } else {
     document.getElementById("result").innerHTML = "Sorry, your browser does not support web storage...";
   }
 }
+	function validation()
+	     	{
+	     		var radio1=document.getElementById('single-room').checked;
+	     		var radio2=document.getElementById('couple-room').checked;
+	     		var radio3=document.getElementById('family-room').checked;
+	     		var PIN=document.getElementById('PIN').value;
+	     		if((radio1=="")&&(radio2=="")&&(radio3==""))
+	     		{
+	     			document.getElementById("errorresult").innerHTML="You should select one room option!";
+                   
+                    return false;
+	     		}
+	     		 if(PIN=="")
+	     		 {
+	     		 	document.getElementById('errorresult1').innerHTML="Your card PIN is required for payment!";
+	     		 	return false;
+	     		 }
+	     		 else if(PIN!=0000){
+	     		 	document.getElementById('errorresult1').innerHTML="Wrong PIN.Try again!";
+	     		 	 document.getElementById('errorresult2').innerHTML="(for project purpose:the PIN is four zeros";
+	     		   return false;
+
+	     		  
+	     		}
+
+	     		else{
+	     		
+	     			return true;
+	     		 
+	     		}
+	     		}
      </script>
 	<header>
 	 <div class="searchF">
@@ -149,7 +180,7 @@
 <div class="form-header">
 <h1>Book Your Room</h1>
 </div>
-<form>
+<form action="#" method="post" onsubmit="return validation();">
 <div class="form-group">
 <div class="form-checkbox">
 <label for="single-room">
@@ -165,6 +196,7 @@
 </label>
 </div>
 </div>
+	<div id="errorresult"></div>
 <table>
 	<tr>
 		<td>
@@ -180,11 +212,13 @@
 </tr>
 </table>
 	<div class="form-group">
-<input class="form-control" type="password">
+<input id ="PIN" class="form-control" type="password">
 <span class="form-label"> CARD PIN</span>
 </div>
+<div id="errorresult1"></div>
+<div id="errorresult2"></div>
 <div class="form-btn">
-<button onclick="bookingCounter()" class="submit-btn" type="button">Book Room</button>
+<button onclick="bookingCounter()" class="submit-btn" type="submit">Book Room</button>
 	<div id="result"> </div>
 </div>
 </form>

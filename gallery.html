@@ -4,6 +4,7 @@
      <meta charset="utf-8">
      <title>Gallery album</title>
      <link rel="stylesheet" href="stiliG.css">
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
      
    <script type="text/javascript">
    	function setbackground()
@@ -60,6 +61,29 @@ document.getElementsByTagName("body")[0].style.backgroundColor = "#" + Color;
 	 
 	
 	</header>
+
+		<body>
+	<script >
+	$(document).ready(function(){
+  $("button").click(function(){
+    $("header").fadeOut(); 
+  });  
+});
+
+</script>
+<script >
+	$(document).ready(function(){
+  $(".buton").click(function(){
+    $("header").fadeIn(); 
+  });  
+});
+
+</script>
+
+
+ <button style="color:black">Click to fade out header</button>
+ <button class="buton" style="color:black">Click to fade in header</button>
+		
 	 <body onload="setbackground();">
 	 	
 	 	<div class="container">
