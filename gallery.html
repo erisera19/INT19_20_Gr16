@@ -134,11 +134,20 @@ document.getElementsByTagName("body")[0].style.backgroundColor = "#" + Color;
 	 	</video>
 	 	<div ID="comment">
 	 		<h1>Video from Albanian alps</h1>
-	 		<p>Visit wild albania</p>
-	 	</div>
+	 		
+<canvas id="Canvas" width="200" height="100"
+style="border:1px solid black">
 
+</canvas>
 
-	 </body>
+<script>
+var canvas = document.getElementById("Canvas");
+var ctx = canvas.getContext("2d");
+ctx.font = "30px Arial";
+ctx.strokeText("Visit Albania",5,40);
+</script>
+</div>
+ 	</body>
 	 	 <footer>
 	  <div class="footer">
 	 
