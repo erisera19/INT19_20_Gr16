@@ -131,11 +131,7 @@ header {
 	{
 		border-top: 1px solid grey;
 	}  
-	/* vija krejt nfillim */
-	hr.new2
-	{
-	border-top: 1px solid green;
-	}
+	
 	/* fotot npjese e dyte me tekst rreth */
 	.img-round {
     border-radius: 50%;
@@ -156,7 +152,7 @@ background-color:white;
   position: relative;
   font-family: Arial;
 }
-/* pjese e gjelbert qe supozohet  me kane galeri */
+/* pjese e gjelbert - galeri */
 .text-block {
   position: absolute;
   bottom: 20px;
@@ -170,7 +166,7 @@ background-color:white;
   font-size: 25px;
   font-family: "Times New Roman", Times, serif;
 }
-/* shigjetat npjesen e gjelbert qe supozohet me kane galeri */
+/* shigjetat npjesen e gjelbert - galeri */
 .next {
   position: absolute;
   background-color: #282828;
