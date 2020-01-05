@@ -153,6 +153,17 @@ padding:2px;
   background-size: cover;
 	
 }
+	.rate{
+	text-align: center;
+			background: #f1f1f1;;
+			width:300px;
+			position: absolute;
+			top:75%;
+			left:3%;
+			box-sizing: border-box;
+			box-shadow: 0 0 20px #000000b3;
+	font-family: "Times New Roman", Times, serif;
+}
 
 .contact-form{
 	width:85%;
@@ -318,7 +329,46 @@ background-color: #4CAF50;
 		 </nav>
 		</header>
 		<body>
+			<div class="rate">
+	<h1>Rate us</h1>
+
+<p>Please input a rating between 1-10:</p>
+
+<input id="Test" type="text">
+<button style="     
+		background-color:green; 
+		color:#FFCCFF; 
+		
+		height:30px; 
+		width:100px; 
+		border-radius:6px; 
+		
+		 cursor: pointer;
+		   
+		  " type="button" onclick="myFunction()">Rate us</button>
+<p id="rate"></p>
+</div>
+<script>
+function myFunction() {
+  var message, x;
+  message = document.getElementById("rate");
+  message.innerHTML = "Thank you for your service";
+  x = document.getElementById("Test").value;
+  try { 
+    if(x == "")  throw " Empty";
+    if(isNaN(x)) throw " Not a number";
+    x = Number(x);
+  
+    if(x > 10)   throw " We can't be that good !!";
+  }
+  catch(err) {
+    message.innerHTML = "Are you sure? " + err;
+  }
+}
+</script>
 			
+			
+			<form>
 		<div class="contact-form">
 			<i class="glyphicon glyphicon-envelope"></i>
 
