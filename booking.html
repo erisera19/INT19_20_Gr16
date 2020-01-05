@@ -11,11 +11,11 @@
      	var slide_img=[];
      	var time=3000;
 
-     	slide_img[0]='img/room1.jpeg';
-        slide_img[1]='img/room2.jpeg';
-     	slide_img[2]='img/room3.jpeg';
-	slide_img[3]='img/room4.jpeg';
-	slide_img[4]='img/room5.jpeg';
+     	slide_img[0]='images/room1.jpeg';
+        slide_img[1]='images/room2.jpeg';
+     	slide_img[2]='images/room3.jpeg';
+	slide_img[3]='images/room4.jpeg';
+	slide_img[4]='images/room5.jpeg';
 	
 	
      
@@ -79,6 +79,42 @@
 	     		 
 	     		}
 	     		}
+	<!-- FooterValidation - javascript -->
+		function validate()
+	     	
+		     		{
+	     			var emri=document.getElementById('emri').value;
+	     			var email=document.getElementById('imella').value;
+	     			var a=document.footerform.Email.value;
+	     			
+	     		
+	     			
+	     		
+	     		if((emri=="")&&(email==""))
+	     		{
+	     			document.getElementById('errorinfooter').innerHTML="All fields must be filled!";
+	     			return false;
+	     		}
+	     		if(a.indexOf('@')<=0)
+	     			{
+	     				document.getElementById('emailerror').innerHTML="Invalid @ position!";
+	     				return false;
+
+	     			}
+	     			else if((a.charAt(a.length-4)!='.') &&(a.charAt(a.length-3)!='.'))
+	     			{
+	     				document.getElementById('emailerror').innerHTML="Invalid . position at 4!"   ;
+	     				return false;
+	     			}
+	     			
+	     		else
+	     		{
+	     			return true;
+	     		}
+}
+	
+	
+	
      </script>
 	<header>
 	 <div class="searchF">
@@ -142,7 +178,7 @@
 	     	<table>
 		<tr>
         <td>
-	<img src="img/hotelobby.jpg" class="lobbyimg">
+	<img src="images/hotelobby.jpg" class="lobbyimg">
       </td>
 	  <td>
 	<h2>OUR SERVICES</h2>
@@ -290,11 +326,15 @@
  			<br> <br>
  			<p>If you are interested to be part of our journey please submit your name and email down below and we will make sure to contact you in the near future:</p>
  			<br>
- 			<form action="index.html" method="post">
- 			<input type="text" placeholder="Name" name="Emri" class="contact-input" /> <br/>
- 			<input type="email" placeholder="Email" name="Email" class="contact-input"/><br/>
+	               <form name ="footerform" action="#" method="post" onsubmit="return validate();">
+ 			<input id="emri" type="text" placeholder="Name" name="Emri" class="contact-input" /> <br/>
+ 			<input id="imella" type="email" placeholder="Email" name="Email" value=""  class="contact-input"/><br/>
+			<div id="emailerror"></div>	
 		
  			<button type="submit" class="btm">SUBMIT</button>
+			<div id="errorinfooter"></div>
+             
+ 			
              </form>
 
 	</div>
