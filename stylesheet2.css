@@ -365,14 +365,14 @@ text-decoration:none;
  
 a:visited 
 {
-color:green;
+color:black;
 text-decoration:none;
 }
 
 a:hover
 {
 font-size:18px;
-color:green;
+color:black;
 }
 
 table
