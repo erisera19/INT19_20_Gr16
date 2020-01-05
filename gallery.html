@@ -24,6 +24,42 @@ Color = "99FFFF";
 document.getElementsByTagName("body")[0].style.backgroundColor = "#" + Color;
 }
    </script>
+	<script>
+		<!-- FooterValidation - javascript -->
+		function validate()
+	     		
+	     		{
+	     			var emri=document.getElementById('emri').value;
+	     			var email=document.getElementById('imella').value;
+	     			var a=document.footerform.Email.value;
+	     			
+	     		
+	     			
+	     		
+	     		if((emri=="")&&(email==""))
+	     		{
+	     			document.getElementById('errorinfooter').innerHTML="All fields must be filled!";
+	     			return false;
+	     		}
+	     		if(a.indexOf('@')<=0)
+	     			{
+	     				document.getElementById('emailerror').innerHTML="Invalid @ position!";
+	     				return false;
+
+	     			}
+	     			else if((a.charAt(a.length-4)!='.') &&(a.charAt(a.length-3)!='.'))
+	     			{
+	     				document.getElementById('emailerror').innerHTML="Invalid . position at 4!"   ;
+	     				return false;
+	     			}
+	     			
+	     		else
+	     		{
+	     			return true;
+	     		}
+}
+
+	</script>
 	 </head>
 
 
@@ -221,11 +257,13 @@ ctx.strokeText("Visit Albania",5,40);
  			<br> <br>
  			<p>If you are interested to be part of our journey please submit your name and email down below and we will make sure to contact you in the near future:</p>
  			<br>
- 			<form action="index.html" method="post">
- 			<input type="text" placeholder="Name" name="Emri" class="contact-input" /> <br/>
- 			<input type="email" placeholder="Email" name="Email" class="contact-input"/><br/>
+ 			<form name ="footerform" action="#" method="post" onsubmit="return validate();">
+ 			<input id="emri" type="text" placeholder="Name" name="Emri" class="contact-input" /> <br/>
+ 			<input id="imella" type="email" placeholder="Email" name="Email" value=""  class="contact-input"/><br/>
+			<div id="emailerror"></div>	
 		
  			<button type="submit" class="btm">SUBMIT</button>
+			<div id="errorinfooter"></div>
              </form>
 
 
