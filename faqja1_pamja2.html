@@ -141,10 +141,7 @@ text-align:left;
 padding:2px;
 }
 
-hr.new2
-	{
-	border-top: 1px solid green;
-	}
+
 
   	
       body{
@@ -315,9 +312,30 @@ background-color: #4CAF50;
     padding-top: 10px;
 
 }
+#div1 {
+  width: 180px;
+  height: 50px;
+  padding: 10px;
+  border: 1px solid #aaaaaa;
+}
 
 
 </style>
+<script>
+  function allowDrop(ev) {
+    ev.preventDefault();
+  }
+  
+  function drag(ev) {
+    ev.dataTransfer.setData("text", ev.target.id);
+  }
+  
+  function drop(ev) {
+    ev.preventDefault();
+    var data = ev.dataTransfer.getData("text");
+    ev.target.appendChild(document.getElementById(data));
+  }
+  </script>
 </head>
   <header>
     <div class="searchF">
@@ -470,6 +488,9 @@ style="height:30px; width:100px; border-radius:10px;
 font-weight:bold;font-size:12pt; font-family:Arial"  >
 </form>
 </div>
+<div id="div1" ondrop="drop(event)" ondragover="allowDrop(event)"></div>
+<br>
+<img id="drag1" src="thank you2.png" draggable="true" ondragstart="drag(event)" width="150" height="50">
 </body>
 <footer>
   <div class="footer">
