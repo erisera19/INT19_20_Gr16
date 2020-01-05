@@ -1,16 +1,159 @@
 <html>
 <head> 
-<body>
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+
 	<title>
-		Reservation
+		Expeditions
 	</title>
+
+
+
 <style>
+  header {
+  background-color: #171b1e;
+  font: "Times New Roman", Times, serif;
+      font-size: medium;
+  }
+.header-table {
+      background: #1e1d22;
+  }
+  /* menu bar ne fillim me linqe ne mes te saj */
+  
+  .topnav {
+      border: 1px solid #000000;
+      border-width: 1px 0;
+      list-style: none;
+      margin: 0;
+      padding: 0;
+      text-align: center;
+  }
+.topnav li {
+      display: inline;
+  }
+  
+  .topnav a {
+      display: inline-block;
+      padding: 10px;
+      border-right: 1px solid grey;
+  }
+  
+  .topnav a:hover {
+      background-color: #ddd;
+      color: black;
+  }
+  .class_search1 
+	{ 
+		float:right; 
+		background-color:		#484848; 
+		color:#FFCCFF; 
+		text-align:center; 
+		height:30px; 
+		width:170px; 
+		border-radius:6px; 
+		font-size:12px;
+		 outline: none;
+		   border: none;
+	} 
+  /* Hijezimi me ngjyre te zeze ne linkun aktual */
+  
+  .topnav a.active {
+      background-color: #000000;
+      color: white;
+  }
+  
+  .topnav a:last-child {
+      border-right: none
+  }
+  /* menu bar end */
+  div.korniza {
+      background-color: #ffffff;
+      border: 1px solid black;
+      opacity: 0.6;
+  }
+  
+  div.korniza p {
+      margin: 5px 5px;
+      font-weight: bold;
+      color: black;
+  }
+  
+  div.alfa {
+      margin-top: 5%;
+      margin-left: 5%;
+  }
+  
+  a:hover {
+      color: white;
+  }
+
+/*read more */
+#more{
+  display: none;
+}
+
+.button {
+        float:right; 
+		background-color:green; 
+		color:#FFCCFF; 
+		text-align:center; 
+		height:30px; 
+		width:100px; 
+		border-radius:6px; 
+		font-size:15px;
+		 cursor: pointer;
+		   outline: none;
+		   border: none;
+}
+
+a:link 
+{
+font-size:90%;
+width:200px;
+color:white;
+text-decoration:none;
+}  
+ 
+a:visited 
+{
+color:white;
+text-decoration:none;
+}
+
+a:hover
+{
+font-size:18px;
+color:red;
+}
+
+table
+{
+width:100%;
+height:50px;	
+padding:0px;
+}
+
+th
+{
+color:white;
+padding:5px;
+}
+
+td
+{
+color:white;
+text-align:left;
+padding:2px;
+}
+
+
+
 
 	div.a
 	{
 	border :2px solid #FFCC00;
 	padding:15px;
-	height:500px;
+	height:900px;
 	width:800px;
 	border-radius:25px;
 	margin-top:5%;
@@ -32,47 +175,303 @@
 	}
 	div#reservation
 {
-border:3px solid rgb(0,0,0);
-height:560px;
-width:600px;
+border:3px solid black;
+height:690px;
+width:700px;
 border-radius:20px;
 margin-left:25%;
 margin-top:2.5%;
 color:rgb(0,0,0);
 font-size:17px;
 text-align:left;
-padding:15px;
+padding:50px;
 }
 
 img
 {
-	height:23%;
-	size:40%;
+	height:10%;
+	size:20%;
 	margin-top:-15%;
 	margin-left:0%;
 	float:right;
-	
 }
+
+
+
+body{
+padding:0;
+margin:0;
+	background:url(foto/reservation.jpg);
+		  background-attachment: fixed;
+  background-size: cover;
+	}
+	
+	
+	
+	 .footer{
+    background: #282828;
+    color: #d3d3d3;
+    height: 400px;
+    position: relative;
+    font-family: Times, Times New Roman, serif;
+
+}
+
+
+
+.footer .footer-content
+{
+    border-bottom: 1px solid #686868;
+    height: 350px;
+    display: flex;
+
+}
+.footer .footer-content h1,
+ {
+    font-family: "Times New Roman", Times, serif;
+    font-weight: bold;
+}
+
+.footer .footer-content .footer-section
+{
+    flex: 1;
+    padding-top: 40px;
+    padding-bottom: 40px;
+    padding-left:20px;
+    padding-right:20px;
+    display: inline-block;
+
+}
+.footer .footer-content .newsletter-form .contact-input
+{
+    background: #404040; 
+    width: 400px;
+    margin-bottom: 10px;
+    line-height: 1.5rem;
+    padding: .6rem 1.2rem;
+    border:none;
+    border-radius: 7px;
+
+}
+.footer .footer-content .newsletter-form .contact-input:hover {
+    background: #303030;
+    border:none;
+}
+.btm {
+padding:.7rem;
+border-radius: 7px;
+background-color: #4CAF50;
+  border: none;
+  color: white;
+  text-decoration: none;
+  margin: 4px 2px;
+  cursor: pointer;
+}
+.footer .footer-bottom
+{
+    background: #282828;
+    
+    height: 30px;
+    width: 100%;
+    position:absolute;
+    bottom: 0px;
+    left:0px;
+    padding-top: 10px;
+
+}
+	
+	
 </style>
+<script>
+function validation()
+	     	{
+	     		 if(Name=="")
+	     		 {
+	     		 	document.getElementById('errorresult1').innerHTML=" ";
+	     		 	return false;
+	     		 }
+
+	     		else{
+	     		
+	     			return true;
+	     		 
+	     		}
+				if(Lastname=="")
+	     		 {
+	     		 	document.getElementById('errorresult1').innerHTML="";
+	     		 	return false;
+	     		 }
+
+	     		else{
+	     		
+	     			return true;
+	     		 
+	     		}
+				if(How many people?=="")
+	     		 {
+	     		 	document.getElementById('errorresult1').innerHTML="";
+	     		 	return false;
+	     		 }
+
+	     		else{
+	     		
+	     			return true;
+	     		 
+	     		}
+				if(Number Children=="")
+	     		 {
+	     		 	document.getElementById('errorresult1').innerHTML="";
+	     		 	return false;
+	     		 }
+
+	     		else{
+	     		
+	     			return true;
+	     		 
+	     		}
+				if(Destination=="")
+	     		 {
+	     		 	document.getElementById('errorresult1').innerHTML="";
+	     		 	return false;
+	     		 }
+
+	     		else{
+	     		
+	     			return true;
+	     		 
+	     		}
+				if(Trip Type=="")
+	     		 {
+	     		 	document.getElementById('errorresult1').innerHTML="";
+	     		 	return false;
+	     		 }
+
+	     		else{
+	     		
+	     			return true;
+	     		 
+	     		}
+				if(Service level=="")
+	     		 {
+	     		 	document.getElementById('errorresult1').innerHTML="";
+	     		 	return false;
+	     		 }
+
+	     		else{
+	     		
+	     			return true;
+	     		 
+	     		}
+				if (isEmpty(document.getElementById('Expedition date').value.trim())) {
+                   alert('Arrival date is required!');
+                   return false;
+				   }
+	     		else{
+	     		
+	     			return true;
+	     		 
+	     		}
+	     		if(Interest=="")
+	     		 {
+	     		 	document.getElementById('errorresult1').innerHTML="";
+	     		 	return false;
+	     		 }
+
+	     		else{
+	     		
+	     			return true;
+	     		 
+	     		}
+				if(Triplength=="")
+	     		 {
+	     		 	document.getElementById('errorresult1').innerHTML="";
+	     		 	return false;
+	     		 }
+
+	     		else{
+	     		
+	     			return true;
+	     		 
+	     		}
+				if(Activity level=="")
+	     		 {
+	     		 	document.getElementById('errorresult1').innerHTML="";
+	     		 	return false;
+	     		 }
+
+	     		else{
+	     		
+	     			return true;
+	     		 
+	     		}
+				if(Price=="")
+	     		 {
+	     		 	document.getElementById('errorresult1').innerHTML="";
+	     		 	return false;
+	     		 }
+
+	     		else{
+	     		
+	     			return true;
+	     		 
+	     		}
+				
+     </script>
 </head>
+<header>
+  <div class="searchF">
+  <table>
+  <tr>
+    <td>
+      <h1>Untainted</h1>
+      <p>Free PSD Website Template</p>
+    </td>
+    <td>
+      <!--Search-->
+      <form id="search">
+    
+      <button class="button">SEARCH</button>
+      <input class="class_search1" type="text" name="Search" placeholder="Search Our Website...">
+      </form>
+    </td>
+  </tr>
+  </table>
+  <br><br><br>
+  </div> 
+  <nav class="topnav">
+
+ 
+ 
+      <a href="#home"  >HOME </a>
+      <a href="faqja1.html">About us  </a>
+      <a href="Gallery.html" class="active">Gallery </a>
+      <a href="Booking.html">Booking  </a>
+      <a href="Contact.html">Contact </a>
+    </nav>
+  
+ 
+ </header>
+
+
+<body>
 
 <div id="reservation">
 
 <b>
-<h1 style="text-align:center;">Reservation</h1>
+<h1 style="text-align:center;">Expeditions</h1>
 <!--Perdorimi i abbr-->
-<a href="C:\Users\FESTIMGASHI\Desktop/Index.html"><abbr title="Homepage"><img src="C:\Users\FESTIMGASHI\Desktop/home.jpg"></a>
+<a href="C:\Users\FESTIMGASHI\Desktop/Index.html"><abbr title="Homepage"><img src="foto/home.jpg"></a>
 
-<form>
+<form action="#" method="post" onsubmit="return validation();" >
 
-Name <input type="text" name="Emri"> 
+Name  <input type="text" id="Name" style="border-radius: 7px; border: 2px solid #dadada;" required />
 <br>
 <br>
-Lastname <input type="text" name="Mbiemri"><br><br>
-Sex:<input type="radio" name="sex" value="Male">Male
-	   <input type="radio" name="sex" value="Female">Female <br><br>
+Lastname <input type="text" id="Lastname" style="border-radius: 7px; border: 2px solid #dadada;" required />
+				<br>
+				<br>
 How many people?
-<select name="How many people?">
+<select name="How many people?" style="border-radius: 7px; border: 2px solid #dadada;" required>
 <option value=""></option>
 <option value="1 adult">1 adult</option>
 <option value="2 adults">2 adults</option>
@@ -81,11 +480,13 @@ How many people?
 
 
 </select>
+<br>
+<br>
 
-
-No children:
-<select name="No Children">
+Num. children:
+<select name="Number Children" style="border-radius: 7px; border: 2px solid #dadada;" required>
 <option value=""></option>
+<option value="0">0</option>
 <option value="1">1</option>
 <option value="2">2</option>
 <option value="3">3</option>
@@ -94,7 +495,7 @@ No children:
 <br><br>
 
 Destination :
-<select name="City">
+<select name="Destination" style="border-radius: 7px; border: 2px solid #dadada;" required>
 <option value=""></option>
 <option value="Karaburun">Karaburun</option>
 <option value="Porto Palermo">Porto Palermo</option>
@@ -102,50 +503,164 @@ Destination :
 <option value="Peje">Peje</option>
 <option value="Albanian Alps">Albanian Alps</option>
 </select>
-<br>
-<br>
-Hotel :
-<select name="Hotel">
-<option value=""></option>
-<option value="Karaburun"></option>
-<option value="Porto Palermo"></option>
-<option value="Jale"></option>
-<option value="Peje"></option>
-<option value="Albanian Alps"></option>
-</select>
+<br><br>
 
-<div class="box">
-         									<p>
-         										<label>Check-in date:</label>
-         										<input type="date" name='date'/>
-         									</p>
-         									<p>
-         										<label>Check-out data:</label>
-         										<input type="date" name='date'/>
-         									</p>
-         								</div>
-<br>
-Phone Number: <input type="text" name="NumriTelefonit" cols="30"><br><br>
+Trip Type :
+<select name="Trip Type" style="border-radius: 7px; border: 2px solid #dadada;" required>
+<option value=""></option>
+<option value="Active">Active</option>
+<option value="Private Expedition">Private Expedition</option>
+</select>
+<br><br>
+
+Service level :
+<select name="Service level" style="border-radius: 7px; border: 2px solid #dadada;" required>
+<option value=""></option>
+<option value="Casual">Casual</option>
+<option value="Premium">Premium</option>
+<option value="Premium">Ultimate</option>
+</select>
+<br><br>
+
+
+Expedition date:
+<input  type="date" id="Expedition date" name="Expedition date" style="border-radius: 7px; border: 2px solid #dadada;" required>
+</input>
+<br><br>
+
+Interests:
+<select name="Service level" style="border-radius: 7px; border: 2px solid #dadada;" required>
+<option value=""></option>
+<option value="Birdwatching">Birdwatching</option>
+<option value="Kayaking & Rafting">Kayaking & Rafting</option>
+<option value="Nature & Wildlife">Nature & Wildlife</option>
+<option value="Snorkeling & Diving">Snorkeling & Diving</option>
+<option value="Photography">Photography</option>
+</select>
+<br><br>
+
+
+Trip length:
+<select name="Trip length" style="border-radius: 7px; border: 2px solid #dadada;" required>
+<option value=""></option>
+<option value="1-2 Days">1-2 Days</option>
+<option value="3-4 Days">3-4 Days</option>
+</select>
+<br><br>
+
+
+Activity level:
+<select name="Activity level" style="border-radius: 7px; border: 2px solid #dadada;" required>
+<option value=""></option>
+<option value="Light-Moderate">Light-Moderate</option>
+<option value="Moderate">Moderate</option>
+<option value="Maximum">Maximum</option>
+</select>
+<br><br>
+
+Price:
+<select name="Price" style="border-radius: 7px; border: 2px solid #dadada;" required>
+<option value=""></option>
+<option value="70-110€ ">40-60€</option>
+<option value="70-110€">70-110€</option>
+<option value="70-110€">120€ and more</option>
+</select>
+<br><br>
 
 Extra information:<br>
 <em>
-<textarea rows="5" cols="40" placeholder="Search Our Website...">
+<textarea rows="3" cols="40" style="border-radius: 7px; border: 2px solid #dadada;" placeholder="Search Our Website..." >
 </textarea>
 </em>
 <br><br>
+<button  class="submit" type="submit" value="Reserve" 
+style="height:30px; width:100px; border-radius:10px; font-weight:bold;font-size:12pt; font-family:Arial">Reserve</button>
 
-<input type=reset value="Reserve" onClick="alert('Your reservation is confirmed!')" 
-style="height:30px; width:100px; border-radius:10px; font-weight:bold;font-size:12pt; font-family:Arial"  >  
-
-<input type=reset  value="Cancel" onClick="alert('Your reservation is cancelled!')" 
-style="height:30px; width:100px; border-radius:10px; font-weight:bold;font-size:12pt; font-family:Arial"  >   
-
+<button  class="submit" type="submit" value="Reserve" onClick="alert('Your reservation is cancelled!')" 
+style="height:30px; width:100px; border-radius:10px; font-weight:bold;font-size:12pt; font-family:Arial">Cancel</button>
+	
 </form>
 </b>
 
 
 
 
+
 </div>
 </body>
-</html>
+<br><br>
+<br>
+<br>
+
+<footer>
+    <div class="footer">
+   
+      <div class="footer-content">
+        <div class="footer-section latestpost">
+          <h2>LATEST POST(S)</h2>
+          <br>
+   
+          
+          <h3>Post title</h3>
+          <h4>Posted by Admin on 26.12.2019</h4>
+          <br>
+          <div class="read-more">
+   
+            Lastest posts that the admins have posted lately,
+             where you can see the  different untainted places
+            (places that aren't touched).You can see the beauty of these untainted places by looking at our photos we have posted for you.
+             </div>
+   </div>
+   
+        
+        <div class="footer-section contact ">
+          <h2>CONTACT DETAILS</h2>
+          <br>  
+   
+           <p>FEF Company <br/> 
+             Street Name&Number <br/>
+              Town <br/>
+              Postcode/zip
+          
+          <br> 
+          <a href="map.html">Click here for a Map to find us »</a>
+          <br>
+          <p> Tel:048-555-666<br/>
+            Fax:038-222-444 <br/>
+          <ul>
+       <li><span style="color:#000000; text-decoration:none;"><a href="MAILTO:fortunagashi@hotmail.com">visitalbania@hotmail.com</a></span></li>
+       </ul></p>
+           
+   
+        </div>
+        <div class="footer-section newsletter-form">
+          <h2>NEWSLETTER</h2> 
+          <br>
+          <p>If you are interested to be part of our journey please submit your name and email down below and we will make sure to contact you in the near future:</p>
+         
+          <form action="index.html" method="post">
+          <input type="text" placeholder="Name" name="Emri" class="contact-input" /> <br/>
+          <input type="email" placeholder="Email" name="Email" class="contact-input"/><br/>
+       
+          <button type="submit" class="btm">SUBMIT</button>
+                </form>
+   
+   
+   
+        </div>
+   
+      </div>
+   
+      <table>
+        <tr>
+          <td style="text-align:left;">
+            <p style="color:white;">Copyright &copy; 2013 Domain Name - All Rights Reserved<p>
+          </td>
+          <td style="text-align:right;">
+            <p style="color:white;">Templates by CS Tamples</p>
+          </td>
+        </tr>
+      </table>
+      
+   </footer>
+   </html>
